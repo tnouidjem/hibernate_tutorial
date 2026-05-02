@@ -1,0 +1,14 @@
+com\example\hibernatetutorial\bootstrap\DataSeeder.class
+com\example\hibernatetutorial\tutorial\HibernateAdvancedUseCases.class
+com\example\hibernatetutorial\domain\OrderStatus.class
+com\example\hibernatetutorial\repository\CustomerRepository.class
+com\example\hibernatetutorial\domain\Customer.class
+com\example\hibernatetutorial\repository\ProductRepository.class
+com\example\hibernatetutorial\repository\PurchaseOrderRepository.class
+com\example\hibernatetutorial\domain\PurchaseOrder.class
+com\example\hibernatetutorial\tutorial\HibernateUseCases.class
+com\example\hibernatetutorial\tutorial\TutorialConsole.class
+com\example\hibernatetutorial\domain\OrderLine.class
+com\example\hibernatetutorial\HibernateTutorialApplication.class
+com\example\hibernatetutorial\domain\Product.class
+com\example\hibernatetutorial\dto\ProductSalesDto.class

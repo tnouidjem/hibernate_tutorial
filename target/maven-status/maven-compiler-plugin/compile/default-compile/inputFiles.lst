@@ -1,0 +1,14 @@
+C:\Users\drave\Documents\developpement\hibernate_tutorial\src\main\java\com\example\hibernatetutorial\bootstrap\DataSeeder.java
+C:\Users\drave\Documents\developpement\hibernate_tutorial\src\main\java\com\example\hibernatetutorial\domain\Customer.java
+C:\Users\drave\Documents\developpement\hibernate_tutorial\src\main\java\com\example\hibernatetutorial\domain\OrderLine.java
+C:\Users\drave\Documents\developpement\hibernate_tutorial\src\main\java\com\example\hibernatetutorial\domain\OrderStatus.java
+C:\Users\drave\Documents\developpement\hibernate_tutorial\src\main\java\com\example\hibernatetutorial\domain\Product.java
+C:\Users\drave\Documents\developpement\hibernate_tutorial\src\main\java\com\example\hibernatetutorial\domain\PurchaseOrder.java
+C:\Users\drave\Documents\developpement\hibernate_tutorial\src\main\java\com\example\hibernatetutorial\dto\ProductSalesDto.java
+C:\Users\drave\Documents\developpement\hibernate_tutorial\src\main\java\com\example\hibernatetutorial\HibernateTutorialApplication.java
+C:\Users\drave\Documents\developpement\hibernate_tutorial\src\main\java\com\example\hibernatetutorial\repository\CustomerRepository.java
+C:\Users\drave\Documents\developpement\hibernate_tutorial\src\main\java\com\example\hibernatetutorial\repository\ProductRepository.java
+C:\Users\drave\Documents\developpement\hibernate_tutorial\src\main\java\com\example\hibernatetutorial\repository\PurchaseOrderRepository.java
+C:\Users\drave\Documents\developpement\hibernate_tutorial\src\main\java\com\example\hibernatetutorial\tutorial\HibernateAdvancedUseCases.java
+C:\Users\drave\Documents\developpement\hibernate_tutorial\src\main\java\com\example\hibernatetutorial\tutorial\HibernateUseCases.java
+C:\Users\drave\Documents\developpement\hibernate_tutorial\src\main\java\com\example\hibernatetutorial\tutorial\TutorialConsole.java
