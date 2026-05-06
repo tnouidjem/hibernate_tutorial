@@ -2,21 +2,25 @@ package com.example.hibernatetutorial;
 
 import com.example.hibernatetutorial.bootstrap.DataSeeder;
 import com.example.hibernatetutorial.tutorial.HibernateAdvancedUseCases;
-import com.example.hibernatetutorial.tutorial.HibernateUseCases;
+import com.example.hibernatetutorial.tutorial.usecase.HibernateUseCase;
+import org.springframework.aop.support.AopUtils;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.util.Comparator;
+import java.util.List;
 
 @SpringBootApplication
 public class HibernateTutorialApplication implements CommandLineRunner {
 
     private final DataSeeder dataSeeder;
-    private final HibernateUseCases hibernateUseCases;
+    private final List<HibernateUseCase> hibernateUseCases;
     private final HibernateAdvancedUseCases hibernateAdvancedUseCases;
 
     public HibernateTutorialApplication(
             DataSeeder dataSeeder,
-            HibernateUseCases hibernateUseCases,
+            List<HibernateUseCase> hibernateUseCases,
             HibernateAdvancedUseCases hibernateAdvancedUseCases
     ) {
         this.dataSeeder = dataSeeder;
@@ -32,21 +36,9 @@ public class HibernateTutorialApplication implements CommandLineRunner {
     public void run(String... args) {
         dataSeeder.resetAndLoad();
 
-        hibernateUseCases.demonstrateRepositoryFindByIdUsesFirstLevelCache();
-        hibernateUseCases.demonstrateRepositoryCallsShareFirstLevelCache();
-        hibernateUseCases.demonstrateFirstLevelCache();
-
-        hibernateUseCases.demonstrateDetachedEntityOutsideServiceTransaction();
-        hibernateUseCases.demonstrateDirtyCheckingInsideTransaction();
-        hibernateUseCases.verifyReadOnlySaveWasNotCommitted();
-        hibernateUseCases.demonstrateTransactionalSelfInvocationHasNoEffect();
-        hibernateUseCases.demonstrateLazyLoadingOutsideTransaction();
-        hibernateUseCases.demonstrateLazyLoadingInsideTransaction();
-
-        hibernateUseCases.demonstrateDtoProjectionInReadOnlyTransaction();
-
-        hibernateUseCases.demonstrateAutoFlushBeforeQuery();
-        hibernateUseCases.demonstrateCommitFlushModeBeforeQuery();
+        hibernateUseCases.stream()
+                .sorted(Comparator.comparing(useCase -> AopUtils.getTargetClass(useCase).getSimpleName()))
+                .forEach(HibernateUseCase::run);
 
         hibernateAdvancedUseCases.demonstrateIsolationLevels();
         hibernateAdvancedUseCases.demonstrateFirstLevelCacheCanHideIsolationEffects();
