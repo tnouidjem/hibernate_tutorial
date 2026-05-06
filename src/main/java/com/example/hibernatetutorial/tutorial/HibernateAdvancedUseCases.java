@@ -20,15 +20,18 @@ public class HibernateAdvancedUseCases {
     private final EntityManager entityManager;
     private final PlatformTransactionManager transactionManager;
     private final TutorialConsole console;
+    private final HibernateDiagnostics diagnostics;
 
     public HibernateAdvancedUseCases(
             EntityManager entityManager,
             PlatformTransactionManager transactionManager,
-            TutorialConsole console
+            TutorialConsole console,
+            HibernateDiagnostics diagnostics
     ) {
         this.entityManager = entityManager;
         this.transactionManager = transactionManager;
         this.console = console;
+        this.diagnostics = diagnostics;
     }
 
     /**
@@ -38,6 +41,7 @@ public class HibernateAdvancedUseCases {
      */
     public void demonstrateIsolationLevels() {
         console.title("5. Isolation: READ_COMMITTED vs REPEATABLE_READ avec deux transactions");
+        diagnostics.print("debut");
 
         compareIsolationLevel(
                 "READ_COMMITTED",
@@ -49,6 +53,7 @@ public class HibernateAdvancedUseCases {
                 TransactionDefinition.ISOLATION_REPEATABLE_READ,
                 new BigDecimal("69.90")
         );
+        diagnostics.print("fin");
     }
 
     /**
@@ -66,13 +71,17 @@ public class HibernateAdvancedUseCases {
         transactionA.setIsolationLevel(isolationLevel);
 
         transactionA.execute(status -> {
+            diagnostics.print(label + " - debut transaction A");
             BigDecimal firstRead = readPriceScalar(MOUSE_SKU);
+            diagnostics.print(label + " - apres premiere lecture scalaire");
 
             updatePriceInNewCommittedTransaction(MOUSE_SKU, concurrentPrice);
+            diagnostics.print(label + " - apres commit transaction B");
 
             // On lit un scalaire et non une entite. Sinon le cache de premier niveau pourrait masquer l'effet
             // du niveau d'isolation en retournant la meme instance deja presente dans le Persistence Context.
             BigDecimal secondRead = readPriceScalar(MOUSE_SKU);
+            diagnostics.print(label + " - apres seconde lecture scalaire");
 
             console.value(label + " - premiere lecture", firstRead);
             console.value(label + " - lecture apres commit externe", secondRead);
@@ -90,6 +99,7 @@ public class HibernateAdvancedUseCases {
      */
     public void demonstrateFirstLevelCacheCanHideIsolationEffects() {
         console.title("6. Isolation et cache de premier niveau: une entite managee peut masquer un commit externe");
+        diagnostics.print("debut");
 
         BigDecimal originalPrice = readPriceInNewTransaction(PHONE_SKU);
         BigDecimal concurrentPrice = originalPrice.add(new BigDecimal("100.00"));
@@ -99,27 +109,33 @@ public class HibernateAdvancedUseCases {
         transactionA.setIsolationLevel(TransactionDefinition.ISOLATION_READ_COMMITTED);
 
         transactionA.execute(status -> {
+            diagnostics.print("debut transaction A");
             var firstEntity = entityManager
                     .createQuery("select p from Product p where p.sku = :sku", com.example.hibernatetutorial.domain.Product.class)
                     .setParameter("sku", PHONE_SKU)
                     .getSingleResult();
+            diagnostics.print("apres premiere lecture entite");
 
             updatePriceInNewCommittedTransaction(PHONE_SKU, concurrentPrice);
+            diagnostics.print("apres commit externe");
 
             var secondEntity = entityManager
                     .createQuery("select p from Product p where p.sku = :sku", com.example.hibernatetutorial.domain.Product.class)
                     .setParameter("sku", PHONE_SKU)
                     .getSingleResult();
+            diagnostics.print("apres seconde lecture entite");
 
             console.value("Meme instance Java", firstEntity == secondEntity);
             console.value("Prix vu sans clear()", secondEntity.getPrice());
 
             entityManager.clear();
+            diagnostics.print("apres clear");
 
             var afterClear = entityManager
                     .createQuery("select p from Product p where p.sku = :sku", com.example.hibernatetutorial.domain.Product.class)
                     .setParameter("sku", PHONE_SKU)
                     .getSingleResult();
+            diagnostics.print("apres relecture apres clear");
 
             console.value("Prix vu apres clear()", afterClear.getPrice());
             console.step("En READ_COMMITTED, la base peut etre a jour, mais une entite deja managee reste l'instance de reference.");
@@ -127,6 +143,7 @@ public class HibernateAdvancedUseCases {
         });
 
         updatePriceInNewCommittedTransaction(PHONE_SKU, originalPrice);
+        diagnostics.print("fin");
     }
 
     /**
@@ -136,6 +153,7 @@ public class HibernateAdvancedUseCases {
      */
     public void demonstrateRequiredPropagationRollback() {
         console.title("7. Propagation REQUIRED: l'appel interne participe a la transaction externe");
+        diagnostics.print("debut");
 
         BigDecimal originalPrice = readPriceInNewTransaction(PHONE_SKU);
 
@@ -147,12 +165,16 @@ public class HibernateAdvancedUseCases {
 
         try {
             outerRequired.execute(outerStatus -> {
+                diagnostics.print("debut transaction externe REQUIRED");
                 updatePriceScalar(PHONE_SKU, new BigDecimal("1500.00"));
                 console.value("Prix dans la transaction externe", readPriceScalar(PHONE_SKU));
+                diagnostics.print("apres modification externe");
 
                 innerRequired.execute(innerStatus -> {
+                    diagnostics.print("debut appel interne REQUIRED");
                     updatePriceScalar(PHONE_SKU, new BigDecimal("1600.00"));
                     console.value("Prix dans l'appel interne REQUIRED", readPriceScalar(PHONE_SKU));
+                    diagnostics.print("apres modification interne REQUIRED");
 
                     // REQUIRED ne cree pas une transaction separee ici. Marquer rollback-only impacte donc
                     // toute la transaction, pas seulement le bloc interne.
@@ -161,6 +183,7 @@ public class HibernateAdvancedUseCases {
                 });
 
                 console.step("Le code externe continue, mais la transaction commune est rollback-only.");
+                diagnostics.print("fin transaction externe avant rollback");
                 return null;
             });
         } catch (UnexpectedRollbackException | TransactionSystemException ex) {
@@ -170,6 +193,7 @@ public class HibernateAdvancedUseCases {
         BigDecimal priceAfterRollback = readPriceInNewTransaction(PHONE_SKU);
         console.value("Prix apres rollback REQUIRED", priceAfterRollback);
         console.value("Prix initial conserve", priceAfterRollback.compareTo(originalPrice) == 0);
+        diagnostics.print("fin");
     }
 
     /**
@@ -179,6 +203,7 @@ public class HibernateAdvancedUseCases {
      */
     public void demonstrateRequiresNewPropagation() {
         console.title("8. Propagation REQUIRES_NEW: l'appel interne commit meme si l'externe rollback");
+        diagnostics.print("debut");
 
         BigDecimal phoneOriginalPrice = readPriceInNewTransaction(PHONE_SKU);
         BigDecimal headsetOriginalPrice = readPriceInNewTransaction(HEADSET_SKU);
@@ -190,17 +215,23 @@ public class HibernateAdvancedUseCases {
         innerRequiresNew.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRES_NEW);
 
         outerRequired.execute(outerStatus -> {
+            diagnostics.print("debut transaction externe REQUIRED");
             updatePriceScalar(PHONE_SKU, new BigDecimal("1700.00"));
             console.value("Prix smartphone dans transaction externe", readPriceScalar(PHONE_SKU));
+            diagnostics.print("apres modification externe");
 
             innerRequiresNew.execute(innerStatus -> {
+                diagnostics.print("debut transaction interne REQUIRES_NEW");
                 updatePriceScalar(HEADSET_SKU, new BigDecimal("80.00"));
                 console.value("Prix casque dans REQUIRES_NEW", readPriceScalar(HEADSET_SKU));
+                diagnostics.print("fin transaction interne REQUIRES_NEW");
                 return null;
             });
+            diagnostics.print("apres retour REQUIRES_NEW");
 
             // Le rollback de la transaction externe n'annule pas le commit deja effectue dans REQUIRES_NEW.
             outerStatus.setRollbackOnly();
+            diagnostics.print("fin transaction externe rollback-only");
             return null;
         });
 
@@ -212,19 +243,26 @@ public class HibernateAdvancedUseCases {
 
         updatePriceInNewCommittedTransaction(HEADSET_SKU, headsetOriginalPrice);
         updatePriceInNewCommittedTransaction(PHONE_SKU, phoneOriginalPrice);
+        diagnostics.print("fin");
     }
 
     private BigDecimal readPriceInNewTransaction(String sku) {
         TransactionTemplate template = new TransactionTemplate(transactionManager);
         template.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRES_NEW);
         template.setReadOnly(true);
-        return template.execute(status -> readPriceScalar(sku));
+        return template.execute(status -> {
+            diagnostics.print("lecture prix en REQUIRES_NEW read-only");
+            return readPriceScalar(sku);
+        });
     }
 
     private void updatePriceInNewCommittedTransaction(String sku, BigDecimal price) {
         TransactionTemplate template = new TransactionTemplate(transactionManager);
         template.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRES_NEW);
-        template.executeWithoutResult(status -> updatePriceScalar(sku, price));
+        template.executeWithoutResult(status -> {
+            diagnostics.print("update prix en REQUIRES_NEW");
+            updatePriceScalar(sku, price);
+        });
     }
 
     private BigDecimal readPriceScalar(String sku) {

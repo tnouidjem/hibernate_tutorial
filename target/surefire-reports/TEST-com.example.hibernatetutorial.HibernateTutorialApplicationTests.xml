@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.example.hibernatetutorial.HibernateTutorialApplicationTests" time="7.559" tests="1" errors="0" skipped="0" failures="0" flakes="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.example.hibernatetutorial.HibernateTutorialApplicationTests" time="11.595" tests="1" errors="0" skipped="0" failures="0" flakes="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="FR"/>
     <property name="sun.boot.library.path" value="C:\Users\drave\Documents\trash\graalvm-jdk-21.0.2+13.1\bin"/>
-    <property name="sun.java.command" value="C:\Users\drave\AppData\Local\Temp\surefire16994332341939383990\surefirebooter-20260502230119608_3.jar C:\Users\drave\AppData\Local\Temp\surefire16994332341939383990 2026-05-02T23-01-19_475-jvmRun1 surefire-20260502230119608_1tmp surefire_0-20260502230119608_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\drave\AppData\Local\Temp\surefire18145490872777445618\surefirebooter-20260506215954237_3.jar C:\Users\drave\AppData\Local\Temp\surefire18145490872777445618 2026-05-06T21-59-53_648-jvmRun1 surefire-20260506215954237_1tmp surefire_0-20260506215954237_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\drave\Documents\developpement\hibernate_tutorial\target\test-classes;C:\Users\drave\Documents\developpement\hibernate_tutorial\target\classes;C:\Users\drave\.m2\repository\org\springframework\boot\spring-boot-starter\4.0.6\spring-boot-starter-4.0.6.jar;C:\Users\drave\.m2\repository\org\springframework\boot\spring-boot-starter-logging\4.0.6\spring-boot-starter-logging-4.0.6.jar;C:\Users\drave\.m2\repository\ch\qos\logback\logback-classic\1.5.32\logback-classic-1.5.32.jar;C:\Users\drave\.m2\repository\ch\qos\logback\logback-core\1.5.32\logback-core-1.5.32.jar;C:\Users\drave\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.25.4\log4j-to-slf4j-2.25.4.jar;C:\Users\drave\.m2\repository\org\apache\logging\log4j\log4j-api\2.25.4\log4j-api-2.25.4.jar;C:\Users\drave\.m2\repository\org\slf4j\jul-to-slf4j\2.0.17\jul-to-slf4j-2.0.17.jar;C:\Users\drave\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\4.0.6\spring-boot-autoconfigure-4.0.6.jar;C:\Users\drave\.m2\repository\org\springframework\boot\spring-boot\4.0.6\spring-boot-4.0.6.jar;C:\Users\drave\.m2\repository\org\springframework\spring-context\7.0.7\spring-context-7.0.7.jar;C:\Users\drave\.m2\repository\org\springframework\spring-expression\7.0.7\spring-expression-7.0.7.jar;C:\Users\drave\.m2\repository\io\micrometer\micrometer-observation\1.16.5\micrometer-observation-1.16.5.jar;C:\Users\drave\.m2\repository\io\micrometer\micrometer-commons\1.16.5\micrometer-commons-1.16.5.jar;C:\Users\drave\.m2\repository\jakarta\annotation\jakarta.annotation-api\3.0.0\jakarta.annotation-api-3.0.0.jar;C:\Users\drave\.m2\repository\org\yaml\snakeyaml\2.5\snakeyaml-2.5.jar;C:\Users\drave\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\4.0.6\spring-boot-starter-data-jpa-4.0.6.jar;C:\Users\drave\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\4.0.6\spring-boot-starter-jdbc-4.0.6.jar;C:\Users\drave\.m2\repository\com\zaxxer\HikariCP\7.0.2\HikariCP-7.0.2.jar;C:\Users\drave\.m2\repository\org\springframework\boot\spring-boot-data-jpa\4.0.6\spring-boot-data-jpa-4.0.6.jar;C:\Users\drave\.m2\repository\org\springframework\boot\spring-boot-data-commons\4.0.6\spring-boot-data-commons-4.0.6.jar;C:\Users\drave\.m2\repository\org\springframework\boot\spring-boot-persistence\4.0.6\spring-boot-persistence-4.0.6.jar;C:\Users\drave\.m2\repository\org\springframework\data\spring-data-commons\4.0.5\spring-data-commons-4.0.5.jar;C:\Users\drave\.m2\repository\org\springframework\boot\spring-boot-hibernate\4.0.6\spring-boot-hibernate-4.0.6.jar;C:\Users\drave\.m2\repository\org\springframework\boot\spring-boot-jpa\4.0.6\spring-boot-jpa-4.0.6.jar;C:\Users\drave\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.2.0\jakarta.persistence-api-3.2.0.jar;C:\Users\drave\.m2\repository\org\hibernate\orm\hibernate-core\7.2.12.Final\hibernate-core-7.2.12.Final.jar;C:\Users\drave\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\drave\.m2\repository\org\jboss\logging\jboss-logging\3.6.3.Final\jboss-logging-3.6.3.Final.jar;C:\Users\drave\.m2\repository\org\hibernate\models\hibernate-models\1.0.1\hibernate-models-1.0.1.jar;C:\Users\drave\.m2\repository\com\fasterxml\classmate\1.7.3\classmate-1.7.3.jar;C:\Users\drave\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.6\jaxb-runtime-4.0.6.jar;C:\Users\drave\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.6\jaxb-core-4.0.6.jar;C:\Users\drave\.m2\repository\org\eclipse\angus\angus-activation\2.0.3\angus-activation-2.0.3.jar;C:\Users\drave\.m2\repository\org\glassfish\jaxb\txw2\4.0.6\txw2-4.0.6.jar;C:\Users\drave\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\drave\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\drave\.m2\repository\org\springframework\spring-orm\7.0.7\spring-orm-7.0.7.jar;C:\Users\drave\.m2\repository\org\springframework\data\spring-data-jpa\4.0.5\spring-data-jpa-4.0.5.jar;C:\Users\drave\.m2\repository\org\springframework\spring-aop\7.0.7\spring-aop-7.0.7.jar;C:\Users\drave\.m2\repository\org\springframework\spring-tx\7.0.7\spring-tx-7.0.7.jar;C:\Users\drave\.m2\repository\org\springframework\spring-beans\7.0.7\spring-beans-7.0.7.jar;C:\Users\drave\.m2\repository\org\antlr\antlr4-runtime\4.13.2\antlr4-runtime-4.13.2.jar;C:\Users\drave\.m2\repository\org\springframework\spring-aspects\7.0.7\spring-aspects-7.0.7.jar;C:\Users\drave\.m2\repository\org\aspectj\aspectjweaver\1.9.25.1\aspectjweaver-1.9.25.1.jar;C:\Users\drave\.m2\repository\org\springframework\boot\spring-boot-jdbc\4.0.6\spring-boot-jdbc-4.0.6.jar;C:\Users\drave\.m2\repository\org\springframework\boot\spring-boot-sql\4.0.6\spring-boot-sql-4.0.6.jar;C:\Users\drave\.m2\repository\org\springframework\boot\spring-boot-transaction\4.0.6\spring-boot-transaction-4.0.6.jar;C:\Users\drave\.m2\repository\org\springframework\spring-jdbc\7.0.7\spring-jdbc-7.0.7.jar;C:\Users\drave\.m2\repository\com\h2database\h2\2.4.240\h2-2.4.240.jar;C:\Users\drave\.m2\repository\org\springframework\boot\spring-boot-starter-test\4.0.6\spring-boot-starter-test-4.0.6.jar;C:\Users\drave\.m2\repository\org\springframework\boot\spring-boot-test\4.0.6\spring-boot-test-4.0.6.jar;C:\Users\drave\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\4.0.6\spring-boot-test-autoconfigure-4.0.6.jar;C:\Users\drave\.m2\repository\com\jayway\jsonpath\json-path\2.10.0\json-path-2.10.0.jar;C:\Users\drave\.m2\repository\org\slf4j\slf4j-api\2.0.17\slf4j-api-2.0.17.jar;C:\Users\drave\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.4\jakarta.xml.bind-api-4.0.4.jar;C:\Users\drave\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.4\jakarta.activation-api-2.1.4.jar;C:\Users\drave\.m2\repository\net\minidev\json-smart\2.6.0\json-smart-2.6.0.jar;C:\Users\drave\.m2\repository\net\minidev\accessors-smart\2.6.0\accessors-smart-2.6.0.jar;C:\Users\drave\.m2\repository\org\ow2\asm\asm\9.7.1\asm-9.7.1.jar;C:\Users\drave\.m2\repository\org\assertj\assertj-core\3.27.7\assertj-core-3.27.7.jar;C:\Users\drave\.m2\repository\net\bytebuddy\byte-buddy\1.17.8\byte-buddy-1.17.8.jar;C:\Users\drave\.m2\repository\org\awaitility\awaitility\4.3.0\awaitility-4.3.0.jar;C:\Users\drave\.m2\repository\org\hamcrest\hamcrest\3.0\hamcrest-3.0.jar;C:\Users\drave\.m2\repository\org\junit\jupiter\junit-jupiter\6.0.3\junit-jupiter-6.0.3.jar;C:\Users\drave\.m2\repository\org\junit\jupiter\junit-jupiter-api\6.0.3\junit-jupiter-api-6.0.3.jar;C:\Users\drave\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\drave\.m2\repository\org\junit\platform\junit-platform-commons\6.0.3\junit-platform-commons-6.0.3.jar;C:\Users\drave\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\drave\.m2\repository\org\junit\jupiter\junit-jupiter-params\6.0.3\junit-jupiter-params-6.0.3.jar;C:\Users\drave\.m2\repository\org\junit\jupiter\junit-jupiter-engine\6.0.3\junit-jupiter-engine-6.0.3.jar;C:\Users\drave\.m2\repository\org\junit\platform\junit-platform-engine\6.0.3\junit-platform-engine-6.0.3.jar;C:\Users\drave\.m2\repository\org\mockito\mockito-core\5.20.0\mockito-core-5.20.0.jar;C:\Users\drave\.m2\repository\net\bytebuddy\byte-buddy-agent\1.17.8\byte-buddy-agent-1.17.8.jar;C:\Users\drave\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\drave\.m2\repository\org\mockito\mockito-junit-jupiter\5.20.0\mockito-junit-jupiter-5.20.0.jar;C:\Users\drave\.m2\repository\org\skyscreamer\jsonassert\1.5.3\jsonassert-1.5.3.jar;C:\Users\drave\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\drave\.m2\repository\org\springframework\spring-core\7.0.7\spring-core-7.0.7.jar;C:\Users\drave\.m2\repository\commons-logging\commons-logging\1.3.6\commons-logging-1.3.6.jar;C:\Users\drave\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\drave\.m2\repository\org\springframework\spring-test\7.0.7\spring-test-7.0.7.jar;C:\Users\drave\.m2\repository\org\xmlunit\xmlunit-core\2.10.4\xmlunit-core-2.10.4.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -35,7 +35,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="FILE_LOG_CHARSET" value="UTF-8"/>
     <property name="java.awt.headless" value="true"/>
-    <property name="surefire.real.class.path" value="C:\Users\drave\AppData\Local\Temp\surefire16994332341939383990\surefirebooter-20260502230119608_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\drave\AppData\Local\Temp\surefire18145490872777445618\surefirebooter-20260506215954237_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.2+13-LTS-jvmci-23.1-b30"/>
@@ -55,7 +55,7 @@
     <property name="user.dir" value="C:\Users\drave\Documents\developpement\hibernate_tutorial"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="PID" value="26692"/>
+    <property name="PID" value="27552"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
     <property name="native.encoding" value="Cp1252"/>
@@ -68,11 +68,11 @@
     <property name="java.class.version" value="65.0"/>
     <property name="LOGGED_APPLICATION_NAME" value="[hibernate-tutorial] "/>
   </properties>
-  <testcase name="contextLoads" classname="com.example.hibernatetutorial.HibernateTutorialApplicationTests" time="0.687">
-    <system-out><![CDATA[23:01:21.272 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.hibernatetutorial.HibernateTutorialApplicationTests]: HibernateTutorialApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-23:01:21.420 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.hibernatetutorial.HibernateTutorialApplication for test class com.example.hibernatetutorial.HibernateTutorialApplicationTests
-23:01:21.505 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.hibernatetutorial.HibernateTutorialApplicationTests]: HibernateTutorialApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-23:01:21.505 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.hibernatetutorial.HibernateTutorialApplication for test class com.example.hibernatetutorial.HibernateTutorialApplicationTests
+  <testcase name="contextLoads" classname="com.example.hibernatetutorial.HibernateTutorialApplicationTests" time="0.402">
+    <system-out><![CDATA[21:59:55.646 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.hibernatetutorial.HibernateTutorialApplicationTests]: HibernateTutorialApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+21:59:55.780 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.hibernatetutorial.HibernateTutorialApplication for test class com.example.hibernatetutorial.HibernateTutorialApplicationTests
+21:59:55.876 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.hibernatetutorial.HibernateTutorialApplicationTests]: HibernateTutorialApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+21:59:55.876 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.hibernatetutorial.HibernateTutorialApplication for test class com.example.hibernatetutorial.HibernateTutorialApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -83,17 +83,17 @@
 
  :: Spring Boot ::                (v4.0.6)
 
-2026-05-02T23:01:21.960+02:00  INFO 26692 --- [hibernate-tutorial] [           main] c.e.h.HibernateTutorialApplicationTests  : Starting HibernateTutorialApplicationTests using Java 21.0.2 with PID 26692 (started by drave in C:\Users\drave\Documents\developpement\hibernate_tutorial)
-2026-05-02T23:01:21.962+02:00  INFO 26692 --- [hibernate-tutorial] [           main] c.e.h.HibernateTutorialApplicationTests  : No active profile set, falling back to 1 default profile: "default"
-2026-05-02T23:01:22.553+02:00  INFO 26692 --- [hibernate-tutorial] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-05-02T23:01:22.681+02:00  INFO 26692 --- [hibernate-tutorial] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 116 ms. Found 3 JPA repository interfaces.
-2026-05-02T23:01:23.095+02:00  INFO 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-05-02T23:01:23.170+02:00  INFO 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
-2026-05-02T23:01:24.116+02:00  INFO 26692 --- [hibernate-tutorial] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-05-02T23:01:24.149+02:00  INFO 26692 --- [hibernate-tutorial] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-05-02T23:01:24.406+02:00  INFO 26692 --- [hibernate-tutorial] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:shop user=SA
-2026-05-02T23:01:24.408+02:00  INFO 26692 --- [hibernate-tutorial] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-05-02T23:01:24.488+02:00  INFO 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2026-05-06T21:59:56.342+02:00  INFO 27552 --- [hibernate-tutorial] [           main] c.e.h.HibernateTutorialApplicationTests  : Starting HibernateTutorialApplicationTests using Java 21.0.2 with PID 27552 (started by drave in C:\Users\drave\Documents\developpement\hibernate_tutorial)
+2026-05-06T21:59:56.342+02:00  INFO 27552 --- [hibernate-tutorial] [           main] c.e.h.HibernateTutorialApplicationTests  : No active profile set, falling back to 1 default profile: "default"
+2026-05-06T21:59:57.038+02:00  INFO 27552 --- [hibernate-tutorial] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-06T21:59:57.096+02:00  INFO 27552 --- [hibernate-tutorial] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 3 JPA repository interfaces.
+2026-05-06T21:59:58.205+02:00  INFO 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-06T21:59:58.351+02:00  INFO 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-06T21:59:59.888+02:00  INFO 27552 --- [hibernate-tutorial] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-06T22:00:00.174+02:00  INFO 27552 --- [hibernate-tutorial] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-06T22:00:01.292+02:00  INFO 27552 --- [hibernate-tutorial] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:shop user=SA
+2026-05-06T22:00:01.313+02:00  INFO 27552 --- [hibernate-tutorial] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-06T22:00:01.671+02:00  INFO 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [jdbc:h2:mem:shop]
 	Database driver: H2 JDBC Driver
 	Database dialect: H2Dialect
@@ -105,16 +105,16 @@
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-05-02T23:01:25.546+02:00  INFO 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-05-02T23:01:25.566+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:04.283+02:00  INFO 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-06T22:00:04.355+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     drop table if exists customers cascade 
-2026-05-02T23:01:25.568+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:04.361+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     drop table if exists order_lines cascade 
-2026-05-02T23:01:25.568+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:04.363+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     drop table if exists products cascade 
-2026-05-02T23:01:25.568+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:04.363+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     drop table if exists purchase_orders cascade 
-2026-05-02T23:01:25.574+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:04.382+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     create table customers (
         id bigint generated by default as identity,
         email varchar(255) not null unique,
@@ -122,7 +122,7 @@
         last_name varchar(255) not null,
         primary key (id)
     )
-2026-05-02T23:01:25.585+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:04.398+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     create table order_lines (
         quantity integer not null,
         unit_price_snapshot numeric(10,2) not null,
@@ -131,7 +131,7 @@
         product_id bigint not null,
         primary key (id)
     )
-2026-05-02T23:01:25.588+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:04.402+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     create table products (
         price numeric(10,2) not null,
         stock_quantity integer not null,
@@ -140,7 +140,7 @@
         sku varchar(255) not null unique,
         primary key (id)
     )
-2026-05-02T23:01:25.590+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:04.404+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     create table purchase_orders (
         created_at timestamp(6) with time zone not null,
         customer_id bigint not null,
@@ -148,49 +148,49 @@
         status enum ('CREATED','PAID','SHIPPED') not null,
         primary key (id)
     )
-2026-05-02T23:01:25.591+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:04.409+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     alter table if exists order_lines 
        add constraint FKt2dn0kd5eewlnvj437fob6c4l 
        foreign key (order_id) 
        references purchase_orders
-2026-05-02T23:01:25.604+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:04.425+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     alter table if exists order_lines 
        add constraint FK5v1oeejtgtf2n3toppm3tkuhh 
        foreign key (product_id) 
        references products
-2026-05-02T23:01:25.604+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:04.427+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     alter table if exists purchase_orders 
        add constraint FKfbqmektiojpqhypnpog4uqk41 
        foreign key (customer_id) 
        references customers
-2026-05-02T23:01:25.604+02:00  INFO 26692 --- [hibernate-tutorial] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-05-02T23:01:25.737+02:00  INFO 26692 --- [hibernate-tutorial] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-05-02T23:01:27.281+02:00  INFO 26692 --- [hibernate-tutorial] [           main] c.e.h.HibernateTutorialApplicationTests  : Started HibernateTutorialApplicationTests in 5.7 seconds (process running for 7.506)
-2026-05-02T23:01:27.315+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:04.431+02:00  INFO 27552 --- [hibernate-tutorial] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-06T22:00:04.538+02:00  INFO 27552 --- [hibernate-tutorial] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-06T22:00:05.942+02:00  INFO 27552 --- [hibernate-tutorial] [           main] c.e.h.HibernateTutorialApplicationTests  : Started HibernateTutorialApplicationTests in 9.96 seconds (process running for 11.51)
+2026-05-06T22:00:05.976+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* delete 
     from
         OrderLine */ delete 
     from
         order_lines ol1_0
-2026-05-02T23:01:27.346+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:05.998+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* delete 
     from
         PurchaseOrder x */ delete 
     from
         purchase_orders po1_0
-2026-05-02T23:01:27.348+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:05.998+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* delete 
     from
         Customer x */ delete 
     from
         customers c1_0
-2026-05-02T23:01:27.352+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.008+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* delete 
     from
         Product x */ delete 
     from
         products p1_0
-2026-05-02T23:01:27.371+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.031+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* insert 
     for
         com.example.hibernatetutorial.domain.Product
@@ -199,11 +199,11 @@
         products (name, price, sku, stock_quantity, id) 
     values
         (?, ?, ?, ?, default)
-2026-05-02T23:01:27.371+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [Ultrabook 14 pouces]
-2026-05-02T23:01:27.371+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:NUMERIC) <- [1299.00]
-2026-05-02T23:01:27.371+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:VARCHAR) <- [SKU-LAPTOP-PRO]
-2026-05-02T23:01:27.371+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:INTEGER) <- [25]
-2026-05-02T23:01:27.403+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.034+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [Ultrabook 14 pouces]
+2026-05-06T22:00:06.034+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:NUMERIC) <- [1299.00]
+2026-05-06T22:00:06.034+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:VARCHAR) <- [SKU-LAPTOP-PRO]
+2026-05-06T22:00:06.034+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:INTEGER) <- [25]
+2026-05-06T22:00:06.057+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* insert 
     for
         com.example.hibernatetutorial.domain.Product
@@ -212,11 +212,11 @@
         products (name, price, sku, stock_quantity, id) 
     values
         (?, ?, ?, ?, default)
-2026-05-02T23:01:27.403+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [Smartphone Plus]
-2026-05-02T23:01:27.403+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:NUMERIC) <- [899.00]
-2026-05-02T23:01:27.404+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:VARCHAR) <- [SKU-PHONE-PLUS]
-2026-05-02T23:01:27.405+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:INTEGER) <- [40]
-2026-05-02T23:01:27.405+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.058+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [Smartphone Plus]
+2026-05-06T22:00:06.058+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:NUMERIC) <- [899.00]
+2026-05-06T22:00:06.058+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:VARCHAR) <- [SKU-PHONE-PLUS]
+2026-05-06T22:00:06.058+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:INTEGER) <- [40]
+2026-05-06T22:00:06.059+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* insert 
     for
         com.example.hibernatetutorial.domain.Product
@@ -225,11 +225,11 @@
         products (name, price, sku, stock_quantity, id) 
     values
         (?, ?, ?, ?, default)
-2026-05-02T23:01:27.405+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [Casque Bluetooth]
-2026-05-02T23:01:27.405+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:NUMERIC) <- [149.90]
-2026-05-02T23:01:27.405+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:VARCHAR) <- [SKU-HEADSET-BT]
-2026-05-02T23:01:27.405+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:INTEGER) <- [80]
-2026-05-02T23:01:27.405+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.059+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [Casque Bluetooth]
+2026-05-06T22:00:06.059+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:NUMERIC) <- [149.90]
+2026-05-06T22:00:06.059+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:VARCHAR) <- [SKU-HEADSET-BT]
+2026-05-06T22:00:06.059+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:INTEGER) <- [80]
+2026-05-06T22:00:06.060+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* insert 
     for
         com.example.hibernatetutorial.domain.Product
@@ -238,11 +238,11 @@
         products (name, price, sku, stock_quantity, id) 
     values
         (?, ?, ?, ?, default)
-2026-05-02T23:01:27.405+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [Clavier mecanique]
-2026-05-02T23:01:27.405+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:NUMERIC) <- [119.90]
-2026-05-02T23:01:27.405+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:VARCHAR) <- [SKU-KEYBOARD-MECH]
-2026-05-02T23:01:27.405+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:INTEGER) <- [55]
-2026-05-02T23:01:27.405+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.060+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [Clavier mecanique]
+2026-05-06T22:00:06.060+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:NUMERIC) <- [119.90]
+2026-05-06T22:00:06.060+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:VARCHAR) <- [SKU-KEYBOARD-MECH]
+2026-05-06T22:00:06.060+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:INTEGER) <- [55]
+2026-05-06T22:00:06.061+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* insert 
     for
         com.example.hibernatetutorial.domain.Product
@@ -251,11 +251,11 @@
         products (name, price, sku, stock_quantity, id) 
     values
         (?, ?, ?, ?, default)
-2026-05-02T23:01:27.405+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [Souris sans fil]
-2026-05-02T23:01:27.405+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:NUMERIC) <- [49.90]
-2026-05-02T23:01:27.405+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:VARCHAR) <- [SKU-MOUSE-WIRELESS]
-2026-05-02T23:01:27.405+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:INTEGER) <- [120]
-2026-05-02T23:01:27.405+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.061+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [Souris sans fil]
+2026-05-06T22:00:06.061+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:NUMERIC) <- [49.90]
+2026-05-06T22:00:06.061+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:VARCHAR) <- [SKU-MOUSE-WIRELESS]
+2026-05-06T22:00:06.061+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:INTEGER) <- [120]
+2026-05-06T22:00:06.061+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* insert 
     for
         com.example.hibernatetutorial.domain.Customer
@@ -264,10 +264,10 @@
         customers (email, first_name, last_name, id) 
     values
         (?, ?, ?, default)
-2026-05-02T23:01:27.413+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [alice.martin@example.com]
-2026-05-02T23:01:27.413+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:VARCHAR) <- [Alice]
-2026-05-02T23:01:27.413+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:VARCHAR) <- [Martin]
-2026-05-02T23:01:27.415+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.061+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [alice.martin@example.com]
+2026-05-06T22:00:06.061+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:VARCHAR) <- [Alice]
+2026-05-06T22:00:06.061+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:VARCHAR) <- [Martin]
+2026-05-06T22:00:06.063+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* insert 
     for
         com.example.hibernatetutorial.domain.Customer
@@ -276,10 +276,10 @@
         customers (email, first_name, last_name, id) 
     values
         (?, ?, ?, default)
-2026-05-02T23:01:27.415+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [nora.bernard@example.com]
-2026-05-02T23:01:27.415+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:VARCHAR) <- [Nora]
-2026-05-02T23:01:27.415+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:VARCHAR) <- [Bernard]
-2026-05-02T23:01:27.415+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.063+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [nora.bernard@example.com]
+2026-05-06T22:00:06.063+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:VARCHAR) <- [Nora]
+2026-05-06T22:00:06.063+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:VARCHAR) <- [Bernard]
+2026-05-06T22:00:06.064+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* insert 
     for
         com.example.hibernatetutorial.domain.Customer
@@ -288,10 +288,10 @@
         customers (email, first_name, last_name, id) 
     values
         (?, ?, ?, default)
-2026-05-02T23:01:27.415+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [yann.petit@example.com]
-2026-05-02T23:01:27.415+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:VARCHAR) <- [Yann]
-2026-05-02T23:01:27.415+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:VARCHAR) <- [Petit]
-2026-05-02T23:01:27.421+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.064+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [yann.petit@example.com]
+2026-05-06T22:00:06.064+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:VARCHAR) <- [Yann]
+2026-05-06T22:00:06.064+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:VARCHAR) <- [Petit]
+2026-05-06T22:00:06.072+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* insert 
     for
         com.example.hibernatetutorial.domain.PurchaseOrder
@@ -300,10 +300,10 @@
         purchase_orders (created_at, customer_id, status, id) 
     values
         (?, ?, ?, default)
-2026-05-02T23:01:27.426+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:TIMESTAMP_UTC) <- [2026-04-27T21:01:27.415523100Z]
-2026-05-02T23:01:27.431+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:BIGINT) <- [1]
-2026-05-02T23:01:27.431+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:ENUM) <- [PAID]
-2026-05-02T23:01:27.437+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.072+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:TIMESTAMP_UTC) <- [2026-05-01T20:00:06.064859700Z]
+2026-05-06T22:00:06.075+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:BIGINT) <- [1]
+2026-05-06T22:00:06.075+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:ENUM) <- [PAID]
+2026-05-06T22:00:06.075+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* insert 
     for
         com.example.hibernatetutorial.domain.OrderLine
@@ -312,11 +312,11 @@
         order_lines (order_id, product_id, quantity, unit_price_snapshot, id) 
     values
         (?, ?, ?, ?, default)
-2026-05-02T23:01:27.437+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [1]
-2026-05-02T23:01:27.437+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:BIGINT) <- [1]
-2026-05-02T23:01:27.437+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:INTEGER) <- [1]
-2026-05-02T23:01:27.437+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:NUMERIC) <- [1299.00]
-2026-05-02T23:01:27.440+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.075+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [1]
+2026-05-06T22:00:06.075+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:BIGINT) <- [1]
+2026-05-06T22:00:06.075+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:INTEGER) <- [1]
+2026-05-06T22:00:06.075+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:NUMERIC) <- [1299.00]
+2026-05-06T22:00:06.075+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* insert 
     for
         com.example.hibernatetutorial.domain.OrderLine
@@ -325,11 +325,11 @@
         order_lines (order_id, product_id, quantity, unit_price_snapshot, id) 
     values
         (?, ?, ?, ?, default)
-2026-05-02T23:01:27.440+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [1]
-2026-05-02T23:01:27.440+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:BIGINT) <- [5]
-2026-05-02T23:01:27.440+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:INTEGER) <- [2]
-2026-05-02T23:01:27.441+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:NUMERIC) <- [49.90]
-2026-05-02T23:01:27.441+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.075+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [1]
+2026-05-06T22:00:06.075+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:BIGINT) <- [5]
+2026-05-06T22:00:06.075+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:INTEGER) <- [2]
+2026-05-06T22:00:06.075+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:NUMERIC) <- [49.90]
+2026-05-06T22:00:06.075+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* insert 
     for
         com.example.hibernatetutorial.domain.PurchaseOrder
@@ -338,10 +338,10 @@
         purchase_orders (created_at, customer_id, status, id) 
     values
         (?, ?, ?, default)
-2026-05-02T23:01:27.441+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:TIMESTAMP_UTC) <- [2026-04-29T21:01:27.415523100Z]
-2026-05-02T23:01:27.441+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:BIGINT) <- [2]
-2026-05-02T23:01:27.441+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:ENUM) <- [SHIPPED]
-2026-05-02T23:01:27.441+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.075+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:TIMESTAMP_UTC) <- [2026-05-03T20:00:06.064859700Z]
+2026-05-06T22:00:06.075+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:BIGINT) <- [2]
+2026-05-06T22:00:06.084+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:ENUM) <- [SHIPPED]
+2026-05-06T22:00:06.084+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* insert 
     for
         com.example.hibernatetutorial.domain.OrderLine
@@ -350,11 +350,11 @@
         order_lines (order_id, product_id, quantity, unit_price_snapshot, id) 
     values
         (?, ?, ?, ?, default)
-2026-05-02T23:01:27.441+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [2]
-2026-05-02T23:01:27.441+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:BIGINT) <- [2]
-2026-05-02T23:01:27.441+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:INTEGER) <- [1]
-2026-05-02T23:01:27.441+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:NUMERIC) <- [899.00]
-2026-05-02T23:01:27.444+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.084+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [2]
+2026-05-06T22:00:06.084+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:BIGINT) <- [2]
+2026-05-06T22:00:06.084+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:INTEGER) <- [1]
+2026-05-06T22:00:06.084+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:NUMERIC) <- [899.00]
+2026-05-06T22:00:06.086+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* insert 
     for
         com.example.hibernatetutorial.domain.OrderLine
@@ -363,11 +363,11 @@
         order_lines (order_id, product_id, quantity, unit_price_snapshot, id) 
     values
         (?, ?, ?, ?, default)
-2026-05-02T23:01:27.444+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [2]
-2026-05-02T23:01:27.444+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:BIGINT) <- [3]
-2026-05-02T23:01:27.444+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:INTEGER) <- [2]
-2026-05-02T23:01:27.444+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:NUMERIC) <- [149.90]
-2026-05-02T23:01:27.446+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.086+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [2]
+2026-05-06T22:00:06.086+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:BIGINT) <- [3]
+2026-05-06T22:00:06.086+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:INTEGER) <- [2]
+2026-05-06T22:00:06.086+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:NUMERIC) <- [149.90]
+2026-05-06T22:00:06.086+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* insert 
     for
         com.example.hibernatetutorial.domain.PurchaseOrder
@@ -376,10 +376,10 @@
         purchase_orders (created_at, customer_id, status, id) 
     values
         (?, ?, ?, default)
-2026-05-02T23:01:27.446+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:TIMESTAMP_UTC) <- [2026-05-01T21:01:27.415523100Z]
-2026-05-02T23:01:27.446+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:BIGINT) <- [3]
-2026-05-02T23:01:27.446+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:ENUM) <- [CREATED]
-2026-05-02T23:01:27.449+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.086+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:TIMESTAMP_UTC) <- [2026-05-05T20:00:06.064859700Z]
+2026-05-06T22:00:06.086+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:BIGINT) <- [3]
+2026-05-06T22:00:06.086+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:ENUM) <- [CREATED]
+2026-05-06T22:00:06.088+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* insert 
     for
         com.example.hibernatetutorial.domain.OrderLine
@@ -388,11 +388,11 @@
         order_lines (order_id, product_id, quantity, unit_price_snapshot, id) 
     values
         (?, ?, ?, ?, default)
-2026-05-02T23:01:27.449+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [3]
-2026-05-02T23:01:27.449+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:BIGINT) <- [4]
-2026-05-02T23:01:27.449+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:INTEGER) <- [2]
-2026-05-02T23:01:27.449+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:NUMERIC) <- [119.90]
-2026-05-02T23:01:27.449+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.088+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [3]
+2026-05-06T22:00:06.088+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:BIGINT) <- [4]
+2026-05-06T22:00:06.088+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:INTEGER) <- [2]
+2026-05-06T22:00:06.088+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:NUMERIC) <- [119.90]
+2026-05-06T22:00:06.088+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* insert 
     for
         com.example.hibernatetutorial.domain.OrderLine
@@ -401,11 +401,11 @@
         order_lines (order_id, product_id, quantity, unit_price_snapshot, id) 
     values
         (?, ?, ?, ?, default)
-2026-05-02T23:01:27.449+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [3]
-2026-05-02T23:01:27.449+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:BIGINT) <- [5]
-2026-05-02T23:01:27.449+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:INTEGER) <- [1]
-2026-05-02T23:01:27.449+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:NUMERIC) <- [49.90]
-2026-05-02T23:01:27.449+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.088+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [3]
+2026-05-06T22:00:06.088+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:BIGINT) <- [5]
+2026-05-06T22:00:06.088+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:INTEGER) <- [1]
+2026-05-06T22:00:06.088+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:NUMERIC) <- [49.90]
+2026-05-06T22:00:06.088+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* insert 
     for
         com.example.hibernatetutorial.domain.OrderLine
@@ -414,11 +414,11 @@
         order_lines (order_id, product_id, quantity, unit_price_snapshot, id) 
     values
         (?, ?, ?, ?, default)
-2026-05-02T23:01:27.449+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [3]
-2026-05-02T23:01:27.449+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:BIGINT) <- [3]
-2026-05-02T23:01:27.449+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:INTEGER) <- [1]
-2026-05-02T23:01:27.449+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:NUMERIC) <- [149.90]
-2026-05-02T23:01:27.466+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.088+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [3]
+2026-05-06T22:00:06.088+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:BIGINT) <- [3]
+2026-05-06T22:00:06.088+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:INTEGER) <- [1]
+2026-05-06T22:00:06.088+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:NUMERIC) <- [149.90]
+2026-05-06T22:00:06.102+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* update
         
     for
@@ -430,12 +430,12 @@
         stock_quantity=? 
     where
         id=?
-2026-05-02T23:01:27.471+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [Ultrabook 14 pouces]
-2026-05-02T23:01:27.471+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:NUMERIC) <- [1299.00]
-2026-05-02T23:01:27.471+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:VARCHAR) <- [SKU-LAPTOP-PRO]
-2026-05-02T23:01:27.471+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:INTEGER) <- [24]
-2026-05-02T23:01:27.471+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (5:BIGINT) <- [1]
-2026-05-02T23:01:27.471+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.105+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [Ultrabook 14 pouces]
+2026-05-06T22:00:06.105+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:NUMERIC) <- [1299.00]
+2026-05-06T22:00:06.105+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:VARCHAR) <- [SKU-LAPTOP-PRO]
+2026-05-06T22:00:06.105+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:INTEGER) <- [24]
+2026-05-06T22:00:06.105+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (5:BIGINT) <- [1]
+2026-05-06T22:00:06.105+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* update
         
     for
@@ -447,12 +447,12 @@
         stock_quantity=? 
     where
         id=?
-2026-05-02T23:01:27.471+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [Smartphone Plus]
-2026-05-02T23:01:27.471+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:NUMERIC) <- [899.00]
-2026-05-02T23:01:27.471+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:VARCHAR) <- [SKU-PHONE-PLUS]
-2026-05-02T23:01:27.471+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:INTEGER) <- [39]
-2026-05-02T23:01:27.471+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (5:BIGINT) <- [2]
-2026-05-02T23:01:27.471+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.108+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [Smartphone Plus]
+2026-05-06T22:00:06.108+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:NUMERIC) <- [899.00]
+2026-05-06T22:00:06.109+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:VARCHAR) <- [SKU-PHONE-PLUS]
+2026-05-06T22:00:06.109+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:INTEGER) <- [39]
+2026-05-06T22:00:06.109+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (5:BIGINT) <- [2]
+2026-05-06T22:00:06.109+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* update
         
     for
@@ -464,12 +464,12 @@
         stock_quantity=? 
     where
         id=?
-2026-05-02T23:01:27.471+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [Casque Bluetooth]
-2026-05-02T23:01:27.471+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:NUMERIC) <- [149.90]
-2026-05-02T23:01:27.471+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:VARCHAR) <- [SKU-HEADSET-BT]
-2026-05-02T23:01:27.471+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:INTEGER) <- [77]
-2026-05-02T23:01:27.471+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (5:BIGINT) <- [3]
-2026-05-02T23:01:27.471+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.109+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [Casque Bluetooth]
+2026-05-06T22:00:06.109+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:NUMERIC) <- [149.90]
+2026-05-06T22:00:06.109+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:VARCHAR) <- [SKU-HEADSET-BT]
+2026-05-06T22:00:06.109+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:INTEGER) <- [77]
+2026-05-06T22:00:06.109+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (5:BIGINT) <- [3]
+2026-05-06T22:00:06.109+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* update
         
     for
@@ -481,12 +481,12 @@
         stock_quantity=? 
     where
         id=?
-2026-05-02T23:01:27.471+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [Clavier mecanique]
-2026-05-02T23:01:27.471+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:NUMERIC) <- [119.90]
-2026-05-02T23:01:27.471+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:VARCHAR) <- [SKU-KEYBOARD-MECH]
-2026-05-02T23:01:27.471+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:INTEGER) <- [53]
-2026-05-02T23:01:27.471+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (5:BIGINT) <- [4]
-2026-05-02T23:01:27.481+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.109+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [Clavier mecanique]
+2026-05-06T22:00:06.109+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:NUMERIC) <- [119.90]
+2026-05-06T22:00:06.109+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:VARCHAR) <- [SKU-KEYBOARD-MECH]
+2026-05-06T22:00:06.109+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:INTEGER) <- [53]
+2026-05-06T22:00:06.109+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (5:BIGINT) <- [4]
+2026-05-06T22:00:06.109+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* update
         
     for
@@ -498,16 +498,23 @@
         stock_quantity=? 
     where
         id=?
-2026-05-02T23:01:27.481+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [Souris sans fil]
-2026-05-02T23:01:27.481+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:NUMERIC) <- [49.90]
-2026-05-02T23:01:27.481+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:VARCHAR) <- [SKU-MOUSE-WIRELESS]
-2026-05-02T23:01:27.481+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:INTEGER) <- [117]
-2026-05-02T23:01:27.481+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (5:BIGINT) <- [5]
+2026-05-06T22:00:06.109+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [Souris sans fil]
+2026-05-06T22:00:06.109+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:NUMERIC) <- [49.90]
+2026-05-06T22:00:06.109+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:VARCHAR) <- [SKU-MOUSE-WIRELESS]
+2026-05-06T22:00:06.109+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:INTEGER) <- [117]
+2026-05-06T22:00:06.109+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (5:BIGINT) <- [5]
 
 ================================================================================
 0a. Repository findById: le deuxieme acces par id ne refait pas de SELECT
 ================================================================================
-2026-05-02T23:01:27.527+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+ - Diagnostics - debut
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.163+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* select
         p.id 
     from
@@ -519,8 +526,8 @@
             products p1_0 
         where
             p1_0.sku=?
-2026-05-02T23:01:27.528+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-LAPTOP-PRO]
-2026-05-02T23:01:27.537+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.163+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-LAPTOP-PRO]
+2026-05-06T22:00:06.164+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     select
         p1_0.id,
         p1_0.name,
@@ -531,13 +538,34 @@
         products p1_0 
     where
         p1_0.id=?
-2026-05-02T23:01:27.537+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [1]
+2026-05-06T22:00:06.164+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [1]
+ - Diagnostics - apres premier findById
+   Transaction active                               : true
+   Entites managees                                 : 1
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+ - Diagnostics - apres second findById
+   Transaction active                               : true
+   Entites managees                                 : 1
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
    Meme instance Java                               : true
    Nom via premiere instance                        : Ultrabook modifie via findById
    Nom via seconde instance                         : Ultrabook modifie via findById
  - Regardez les logs SQL: apres le SELECT par id initial, le deuxieme findById ne relit pas la ligne.
  - La transaction commit ensuite: le setter declenche un UPDATE par dirty checking.
-2026-05-02T23:01:27.549+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+ - Diagnostics - fin avant commit
+   Transaction active                               : true
+   Entites managees                                 : 1
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.185+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* update
         
     for
@@ -549,16 +577,23 @@
         stock_quantity=? 
     where
         id=?
-2026-05-02T23:01:27.549+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [Ultrabook modifie via findById]
-2026-05-02T23:01:27.549+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:NUMERIC) <- [1299.00]
-2026-05-02T23:01:27.549+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:VARCHAR) <- [SKU-LAPTOP-PRO]
-2026-05-02T23:01:27.549+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:INTEGER) <- [24]
-2026-05-02T23:01:27.549+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (5:BIGINT) <- [1]
+2026-05-06T22:00:06.186+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [Ultrabook modifie via findById]
+2026-05-06T22:00:06.186+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:NUMERIC) <- [1299.00]
+2026-05-06T22:00:06.186+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:VARCHAR) <- [SKU-LAPTOP-PRO]
+2026-05-06T22:00:06.186+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:INTEGER) <- [24]
+2026-05-06T22:00:06.186+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (5:BIGINT) <- [1]
 
 ================================================================================
 0b. Repository findBySku: deux SELECT, mais une seule instance Java
 ================================================================================
-2026-05-02T23:01:27.582+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+ - Diagnostics - debut
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.232+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* SELECT
         p 
     FROM
@@ -574,8 +609,15 @@
             products p1_0 
         where
             p1_0.sku=?
-2026-05-02T23:01:27.582+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-LAPTOP-PRO]
-2026-05-02T23:01:27.582+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.232+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-LAPTOP-PRO]
+ - Diagnostics - apres premier findBySku
+   Transaction active                               : true
+   Entites managees                                 : 1
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.240+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* SELECT
         p 
     FROM
@@ -591,13 +633,27 @@
             products p1_0 
         where
             p1_0.sku=?
-2026-05-02T23:01:27.582+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-LAPTOP-PRO]
+2026-05-06T22:00:06.240+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-LAPTOP-PRO]
+ - Diagnostics - apres second findBySku
+   Transaction active                               : true
+   Entites managees                                 : 1
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
    Meme instance Java                               : true
    Nom via premiere instance                        : Ultrabook renomme dans le cache
    Nom via seconde instance                         : Ultrabook renomme dans le cache
  - A ce stade, aucun save(...) n'est necessaire pour que les deux references voient la meme valeur.
  - La transaction va commit: regardez les logs SQL, Hibernate fera un UPDATE a la fin de la methode.
-2026-05-02T23:01:27.592+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+ - Diagnostics - fin avant commit
+   Transaction active                               : true
+   Entites managees                                 : 1
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.243+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* update
         
     for
@@ -609,16 +665,23 @@
         stock_quantity=? 
     where
         id=?
-2026-05-02T23:01:27.592+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [Ultrabook renomme dans le cache]
-2026-05-02T23:01:27.592+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:NUMERIC) <- [1299.00]
-2026-05-02T23:01:27.592+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:VARCHAR) <- [SKU-LAPTOP-PRO]
-2026-05-02T23:01:27.592+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:INTEGER) <- [24]
-2026-05-02T23:01:27.592+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (5:BIGINT) <- [1]
+2026-05-06T22:00:06.243+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [Ultrabook renomme dans le cache]
+2026-05-06T22:00:06.243+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:NUMERIC) <- [1299.00]
+2026-05-06T22:00:06.243+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:VARCHAR) <- [SKU-LAPTOP-PRO]
+2026-05-06T22:00:06.243+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:INTEGER) <- [24]
+2026-05-06T22:00:06.243+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (5:BIGINT) <- [1]
 
 ================================================================================
 1. Cache de premier niveau: une identite Java par entite dans une transaction
 ================================================================================
-2026-05-02T23:01:27.592+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+ - Diagnostics - debut
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.249+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* select
         p.id 
     from
@@ -630,8 +693,8 @@
             products p1_0 
         where
             p1_0.sku=?
-2026-05-02T23:01:27.592+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-LAPTOP-PRO]
-2026-05-02T23:01:27.592+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.249+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-LAPTOP-PRO]
+2026-05-06T22:00:06.249+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     select
         p1_0.id,
         p1_0.name,
@@ -642,12 +705,33 @@
         products p1_0 
     where
         p1_0.id=?
-2026-05-02T23:01:27.592+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [1]
+2026-05-06T22:00:06.249+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [1]
+ - Diagnostics - apres premier EntityManager.find
+   Transaction active                               : true
+   Entites managees                                 : 1
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+ - Diagnostics - apres second EntityManager.find
+   Transaction active                               : true
+   Entites managees                                 : 1
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
    Meme instance Java avant clear()                 : true
    EntityManager contient l'entite                  : true
    Prix lu depuis firstLoad apres setter            : 777.77
    Prix lu depuis secondLoad                        : 777.77
-2026-05-02T23:01:27.600+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+ - Diagnostics - apres clear
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.255+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     select
         p1_0.id,
         p1_0.name,
@@ -658,7 +742,14 @@
         products p1_0 
     where
         p1_0.id=?
-2026-05-02T23:01:27.600+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [1]
+2026-05-06T22:00:06.255+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [1]
+ - Diagnostics - apres relecture
+   Transaction active                               : true
+   Entites managees                                 : 1
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
    Meme instance Java apres clear()                 : false
    Produit recharge                                 : SKU-LAPTOP-PRO - Ultrabook renomme dans le cache (1299.00 EUR)
  - La transaction est rollback-only pour que ce setter reste une demonstration sans effet durable.
@@ -666,7 +757,14 @@
 ================================================================================
 2a. Sans transaction de service: modification d'une entite detachee
 ================================================================================
-2026-05-02T23:01:27.628+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+ - Diagnostics - debut
+   Transaction active                               : false
+   Entites managees                                 : n/a hors transaction
+   Connexions actives                               : 0
+   Connexions idle                                  : 10
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.294+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* SELECT
         p 
     FROM
@@ -682,8 +780,15 @@
             products p1_0 
         where
             p1_0.sku=?
-2026-05-02T23:01:27.628+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-HEADSET-BT]
-2026-05-02T23:01:27.630+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.294+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-HEADSET-BT]
+ - Diagnostics - apres appel repository
+   Transaction active                               : false
+   Entites managees                                 : n/a hors transaction
+   Connexions actives                               : 0
+   Connexions idle                                  : 10
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.299+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* SELECT
         p 
     FROM
@@ -699,16 +804,30 @@
             products p1_0 
         where
             p1_0.sku=?
-2026-05-02T23:01:27.630+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-HEADSET-BT]
+2026-05-06T22:00:06.299+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-HEADSET-BT]
  - Le changement local n'est pas persiste, car aucun Persistence Context n'est actif autour du use case.
    Prix modifie en memoire                          : 1.00
    Prix relu en base                                : 149.90
    Prix initial conserve                            : true
+ - Diagnostics - fin
+   Transaction active                               : false
+   Entites managees                                 : n/a hors transaction
+   Connexions actives                               : 0
+   Connexions idle                                  : 10
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
 
 ================================================================================
 2b. Transaction read-only: setter + save explicite ne modifient pas la base
 ================================================================================
-2026-05-02T23:01:27.634+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+ - Diagnostics - debut
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.307+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* SELECT
         p 
     FROM
@@ -724,7 +843,21 @@
             products p1_0 
         where
             p1_0.sku=?
-2026-05-02T23:01:27.634+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-KEYBOARD-MECH]
+2026-05-06T22:00:06.309+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-KEYBOARD-MECH]
+ - Diagnostics - apres lecture clavier
+   Transaction active                               : true
+   Entites managees                                 : 1
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+ - Diagnostics - apres save explicite
+   Transaction active                               : true
+   Entites managees                                 : 1
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
    Transaction Spring read-only                     : true
    Transaction Hibernate read-only                  : true
    Flush mode Hibernate                             : MANUAL
@@ -732,7 +865,25 @@
    Prix initial                                     : 119.90
    Prix modifie en memoire                          : 129.90
  - Regardez les logs SQL: aucun UPDATE du clavier n'est attendu au commit de cette transaction read-only.
-2026-05-02T23:01:27.639+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+ - Diagnostics - fin avant commit read-only
+   Transaction active                               : true
+   Entites managees                                 : 1
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+
+================================================================================
+2b-verification. Verification apres transaction read-only
+================================================================================
+ - Diagnostics - debut
+   Transaction active                               : false
+   Entites managees                                 : n/a hors transaction
+   Connexions actives                               : 0
+   Connexions idle                                  : 10
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.322+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* SELECT
         p 
     FROM
@@ -748,13 +899,27 @@
             products p1_0 
         where
             p1_0.sku=?
-2026-05-02T23:01:27.639+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-KEYBOARD-MECH]
+2026-05-06T22:00:06.322+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-KEYBOARD-MECH]
    Prix relu apres transaction read-only            : 119.90
+ - Diagnostics - fin
+   Transaction active                               : false
+   Entites managees                                 : n/a hors transaction
+   Connexions actives                               : 0
+   Connexions idle                                  : 10
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
 
 ================================================================================
 2c. Self-invocation: appeler une methode @Transactional de la meme classe ne passe pas par le proxy
 ================================================================================
-2026-05-02T23:01:27.639+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+ - Diagnostics - debut
+   Transaction active                               : false
+   Entites managees                                 : n/a hors transaction
+   Connexions actives                               : 0
+   Connexions idle                                  : 10
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.322+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* SELECT
         p 
     FROM
@@ -770,9 +935,16 @@
             products p1_0 
         where
             p1_0.sku=?
-2026-05-02T23:01:27.639+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-HEADSET-BT]
+2026-05-06T22:00:06.322+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-HEADSET-BT]
+ - Diagnostics - debut methode annotee appelee directement
+   Transaction active                               : false
+   Entites managees                                 : n/a hors transaction
+   Connexions actives                               : 0
+   Connexions idle                                  : 10
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
    Transaction active dans la methode annotee       : false
-2026-05-02T23:01:27.647+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.332+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* SELECT
         p 
     FROM
@@ -788,9 +960,16 @@
             products p1_0 
         where
             p1_0.sku=?
-2026-05-02T23:01:27.648+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-HEADSET-BT]
+2026-05-06T22:00:06.332+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-HEADSET-BT]
    Prix modifie en memoire dans la methode annotee  : 2.00
-2026-05-02T23:01:27.648+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+ - Diagnostics - fin methode annotee appelee directement
+   Transaction active                               : false
+   Entites managees                                 : n/a hors transaction
+   Connexions actives                               : 0
+   Connexions idle                                  : 10
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.334+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* SELECT
         p 
     FROM
@@ -806,16 +985,30 @@
             products p1_0 
         where
             p1_0.sku=?
-2026-05-02T23:01:27.650+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-HEADSET-BT]
+2026-05-06T22:00:06.334+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-HEADSET-BT]
    Prix avant self-invocation                       : 149.90
    Prix apres self-invocation                       : 149.90
    Modification persistee                           : false
  - Conclusion: l'annotation @Transactional n'a pas ete appliquee, car l'appel n'est pas passe par le proxy Spring.
+ - Diagnostics - fin
+   Transaction active                               : false
+   Entites managees                                 : n/a hors transaction
+   Connexions actives                               : 0
+   Connexions idle                                  : 10
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
 
 ================================================================================
 2d. Transaction et LAZY loading: acces hors transaction
 ================================================================================
-2026-05-02T23:01:27.676+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+ - Diagnostics - debut
+   Transaction active                               : false
+   Entites managees                                 : n/a hors transaction
+   Connexions actives                               : 0
+   Connexions idle                                  : 10
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.346+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* SELECT
         p 
     FROM
@@ -832,14 +1025,35 @@
             po1_0.id 
         fetch
             first ? rows only
-2026-05-02T23:01:27.676+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:INTEGER) <- [1]
+2026-05-06T22:00:06.346+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:INTEGER) <- [1]
+ - Diagnostics - apres lecture commande
+   Transaction active                               : false
+   Entites managees                                 : n/a hors transaction
+   Connexions actives                               : 0
+   Connexions idle                                  : 10
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
  - LazyInitializationException attendue: la collection LAZY est accedee apres fermeture de la transaction du repository.
    Message Hibernate                                : Cannot lazily initialize collection of role 'com.example.hibernatetutorial.domain.PurchaseOrder.lines' with key '1' (no session)
+ - Diagnostics - fin
+   Transaction active                               : false
+   Entites managees                                 : n/a hors transaction
+   Connexions actives                               : 0
+   Connexions idle                                  : 10
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
 
 ================================================================================
 2e. Transaction et LAZY loading: acces dans une transaction read-only
 ================================================================================
-2026-05-02T23:01:27.690+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+ - Diagnostics - debut
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.365+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* SELECT
         p 
     FROM
@@ -856,8 +1070,15 @@
             po1_0.id 
         fetch
             first ? rows only
-2026-05-02T23:01:27.690+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:INTEGER) <- [1]
-2026-05-02T23:01:27.695+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.365+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:INTEGER) <- [1]
+ - Diagnostics - apres lecture commande
+   Transaction active                               : true
+   Entites managees                                 : 1
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.370+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     select
         l1_0.order_id,
         l1_0.id,
@@ -868,16 +1089,30 @@
         order_lines l1_0 
     where
         l1_0.order_id=?
-2026-05-02T23:01:27.695+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [1]
+2026-05-06T22:00:06.370+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:BIGINT) <- [1]
    Nombre de lignes commande                        : 2
+ - Diagnostics - apres initialisation lignes LAZY
+   Transaction active                               : true
+   Entites managees                                 : 3
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
    Montant total                                    : 1398.80
 
 ================================================================================
 3. Projection DTO dans une transaction read-only
 ================================================================================
+ - Diagnostics - debut
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
    Transaction Hibernate read-only                  : true
    Flush mode Hibernate                             : MANUAL
-2026-05-02T23:01:27.714+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.404+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* select
         new com.example.hibernatetutorial.dto.ProductSalesDto(p.sku, p.name, sum(l.quantity), sum(l.unitPriceSnapshot * l.quantity)) 
     from
@@ -903,6 +1138,13 @@
             p1_0.name 
         order by
             sum(ol1_0.quantity) desc
+ - Diagnostics - apres projection DTO
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
    SKU-HEADSET-BT                                   : 3 ventes, CA 449.70 EUR
    SKU-MOUSE-WIRELESS                               : 3 ventes, CA 149.70 EUR
    SKU-KEYBOARD-MECH                                : 2 ventes, CA 239.80 EUR
@@ -912,7 +1154,14 @@
 ================================================================================
 4a. Flush AUTO: une requete JPQL peut declencher un UPDATE avant son SELECT
 ================================================================================
-2026-05-02T23:01:27.722+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+ - Diagnostics - debut
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.409+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* SELECT
         p 
     FROM
@@ -928,8 +1177,15 @@
             products p1_0 
         where
             p1_0.sku=?
-2026-05-02T23:01:27.722+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-LAPTOP-PRO]
-2026-05-02T23:01:27.726+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.409+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-LAPTOP-PRO]
+ - Diagnostics - apres modification laptop
+   Transaction active                               : true
+   Entites managees                                 : 1
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.428+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* update
         
     for
@@ -941,12 +1197,12 @@
         stock_quantity=? 
     where
         id=?
-2026-05-02T23:01:27.726+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [Ultrabook renomme dans le cache]
-2026-05-02T23:01:27.726+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:NUMERIC) <- [1999.00]
-2026-05-02T23:01:27.726+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:VARCHAR) <- [SKU-LAPTOP-PRO]
-2026-05-02T23:01:27.726+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:INTEGER) <- [24]
-2026-05-02T23:01:27.726+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (5:BIGINT) <- [1]
-2026-05-02T23:01:27.731+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.428+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [Ultrabook renomme dans le cache]
+2026-05-06T22:00:06.428+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:NUMERIC) <- [1999.00]
+2026-05-06T22:00:06.428+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (3:VARCHAR) <- [SKU-LAPTOP-PRO]
+2026-05-06T22:00:06.428+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (4:INTEGER) <- [24]
+2026-05-06T22:00:06.428+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (5:BIGINT) <- [1]
+2026-05-06T22:00:06.428+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* select
         p 
     from
@@ -966,7 +1222,14 @@
             p1_0.price>=? 
         order by
             p1_0.price desc
-2026-05-02T23:01:27.731+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:NUMERIC) <- [1500.00]
+2026-05-06T22:00:06.431+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:NUMERIC) <- [1500.00]
+ - Diagnostics - apres requete qui declenche flush AUTO
+   Transaction active                               : true
+   Entites managees                                 : 1
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
  - Regardez les logs SQL: l'UPDATE du laptop apparait avant le SELECT des produits chers.
    Laptop present dans le resultat                  : true
  - La transaction est marquee rollback-only pour garder les donnees initiales apres la demo.
@@ -974,7 +1237,14 @@
 ================================================================================
 4b. Flush COMMIT: une requete peut ne pas voir une modification en attente
 ================================================================================
-2026-05-02T23:01:27.731+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+ - Diagnostics - debut
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.431+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* SELECT
         p 
     FROM
@@ -990,8 +1260,15 @@
             products p1_0 
         where
             p1_0.sku=?
-2026-05-02T23:01:27.731+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-PHONE-PLUS]
-2026-05-02T23:01:27.731+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.431+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-PHONE-PLUS]
+ - Diagnostics - apres modification smartphone
+   Transaction active                               : true
+   Entites managees                                 : 1
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.431+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* select
         p 
     from
@@ -1011,7 +1288,14 @@
             p1_0.price>=? 
         order by
             p1_0.price desc
-2026-05-02T23:01:27.736+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:NUMERIC) <- [1500.00]
+2026-05-06T22:00:06.441+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:NUMERIC) <- [1500.00]
+ - Diagnostics - apres requete en flush COMMIT
+   Transaction active                               : true
+   Entites managees                                 : 1
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
  - Regardez les logs SQL: le SELECT part sans UPDATE prealable du smartphone.
    Smartphone present dans le resultat              : false
  - La transaction est rollback-only pour eviter de conserver ce prix fictif.
@@ -1019,7 +1303,21 @@
 ================================================================================
 5. Isolation: READ_COMMITTED vs REPEATABLE_READ avec deux transactions
 ================================================================================
-2026-05-02T23:01:27.739+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+ - Diagnostics - debut
+   Transaction active                               : false
+   Entites managees                                 : n/a hors transaction
+   Connexions actives                               : 0
+   Connexions idle                                  : 10
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+ - Diagnostics - lecture prix en REQUIRES_NEW read-only
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.444+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* select
         p.price 
     from
@@ -1031,9 +1329,16 @@
             products p1_0 
         where
             p1_0.sku=?
-2026-05-02T23:01:27.739+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-MOUSE-WIRELESS]
+2026-05-06T22:00:06.449+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-MOUSE-WIRELESS]
  - Isolation READ_COMMITTED: transaction A lit, transaction B modifie et commit, transaction A relit.
-2026-05-02T23:01:27.742+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+ - Diagnostics - READ_COMMITTED - debut transaction A
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.454+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* select
         p.price 
     from
@@ -1045,8 +1350,22 @@
             products p1_0 
         where
             p1_0.sku=?
-2026-05-02T23:01:27.742+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-MOUSE-WIRELESS]
-2026-05-02T23:01:27.759+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.454+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-MOUSE-WIRELESS]
+ - Diagnostics - READ_COMMITTED - apres premiere lecture scalaire
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+ - Diagnostics - update prix en REQUIRES_NEW
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 2
+   Connexions idle                                  : 8
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.466+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* update
         Product p 
     set
@@ -1057,9 +1376,16 @@
         price=? 
     where
         p1_0.sku=?
-2026-05-02T23:01:27.759+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:NUMERIC) <- [59.90]
-2026-05-02T23:01:27.759+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:VARCHAR) <- [SKU-MOUSE-WIRELESS]
-2026-05-02T23:01:27.759+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.466+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:NUMERIC) <- [59.90]
+2026-05-06T22:00:06.466+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:VARCHAR) <- [SKU-MOUSE-WIRELESS]
+ - Diagnostics - READ_COMMITTED - apres commit transaction B
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.477+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* select
         p.price 
     from
@@ -1071,11 +1397,25 @@
             products p1_0 
         where
             p1_0.sku=?
-2026-05-02T23:01:27.759+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-MOUSE-WIRELESS]
+2026-05-06T22:00:06.477+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-MOUSE-WIRELESS]
+ - Diagnostics - READ_COMMITTED - apres seconde lecture scalaire
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
    READ_COMMITTED - premiere lecture                : 49.90
    READ_COMMITTED - lecture apres commit externe    : 59.90
    READ_COMMITTED - la transaction A voit le commit externe : true
-2026-05-02T23:01:27.766+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+ - Diagnostics - update prix en REQUIRES_NEW
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.482+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* update
         Product p 
     set
@@ -1086,9 +1426,16 @@
         price=? 
     where
         p1_0.sku=?
-2026-05-02T23:01:27.766+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:NUMERIC) <- [49.90]
-2026-05-02T23:01:27.766+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:VARCHAR) <- [SKU-MOUSE-WIRELESS]
-2026-05-02T23:01:27.766+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.482+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:NUMERIC) <- [49.90]
+2026-05-06T22:00:06.482+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:VARCHAR) <- [SKU-MOUSE-WIRELESS]
+ - Diagnostics - lecture prix en REQUIRES_NEW read-only
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.486+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* select
         p.price 
     from
@@ -1100,9 +1447,16 @@
             products p1_0 
         where
             p1_0.sku=?
-2026-05-02T23:01:27.766+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-MOUSE-WIRELESS]
+2026-05-06T22:00:06.488+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-MOUSE-WIRELESS]
  - Isolation REPEATABLE_READ: transaction A lit, transaction B modifie et commit, transaction A relit.
-2026-05-02T23:01:27.766+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+ - Diagnostics - REPEATABLE_READ - debut transaction A
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.488+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* select
         p.price 
     from
@@ -1114,8 +1468,22 @@
             products p1_0 
         where
             p1_0.sku=?
-2026-05-02T23:01:27.766+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-MOUSE-WIRELESS]
-2026-05-02T23:01:27.766+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.488+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-MOUSE-WIRELESS]
+ - Diagnostics - REPEATABLE_READ - apres premiere lecture scalaire
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+ - Diagnostics - update prix en REQUIRES_NEW
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 2
+   Connexions idle                                  : 8
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.492+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* update
         Product p 
     set
@@ -1126,9 +1494,16 @@
         price=? 
     where
         p1_0.sku=?
-2026-05-02T23:01:27.771+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:NUMERIC) <- [69.90]
-2026-05-02T23:01:27.771+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:VARCHAR) <- [SKU-MOUSE-WIRELESS]
-2026-05-02T23:01:27.771+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.492+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:NUMERIC) <- [69.90]
+2026-05-06T22:00:06.492+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:VARCHAR) <- [SKU-MOUSE-WIRELESS]
+ - Diagnostics - REPEATABLE_READ - apres commit transaction B
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.492+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* select
         p.price 
     from
@@ -1140,11 +1515,25 @@
             products p1_0 
         where
             p1_0.sku=?
-2026-05-02T23:01:27.771+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-MOUSE-WIRELESS]
+2026-05-06T22:00:06.492+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-MOUSE-WIRELESS]
+ - Diagnostics - REPEATABLE_READ - apres seconde lecture scalaire
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
    REPEATABLE_READ - premiere lecture               : 49.90
    REPEATABLE_READ - lecture apres commit externe   : 49.90
    REPEATABLE_READ - la transaction A voit le commit externe : false
-2026-05-02T23:01:27.771+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+ - Diagnostics - update prix en REQUIRES_NEW
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.499+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* update
         Product p 
     set
@@ -1155,13 +1544,34 @@
         price=? 
     where
         p1_0.sku=?
-2026-05-02T23:01:27.771+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:NUMERIC) <- [49.90]
-2026-05-02T23:01:27.771+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:VARCHAR) <- [SKU-MOUSE-WIRELESS]
+2026-05-06T22:00:06.499+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:NUMERIC) <- [49.90]
+2026-05-06T22:00:06.499+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:VARCHAR) <- [SKU-MOUSE-WIRELESS]
+ - Diagnostics - fin
+   Transaction active                               : false
+   Entites managees                                 : n/a hors transaction
+   Connexions actives                               : 0
+   Connexions idle                                  : 10
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
 
 ================================================================================
 6. Isolation et cache de premier niveau: une entite managee peut masquer un commit externe
 ================================================================================
-2026-05-02T23:01:27.771+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+ - Diagnostics - debut
+   Transaction active                               : false
+   Entites managees                                 : n/a hors transaction
+   Connexions actives                               : 0
+   Connexions idle                                  : 10
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+ - Diagnostics - lecture prix en REQUIRES_NEW read-only
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.501+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* select
         p.price 
     from
@@ -1173,8 +1583,15 @@
             products p1_0 
         where
             p1_0.sku=?
-2026-05-02T23:01:27.771+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-PHONE-PLUS]
-2026-05-02T23:01:27.818+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.501+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-PHONE-PLUS]
+ - Diagnostics - debut transaction A
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.508+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* select
         p 
     from
@@ -1190,8 +1607,22 @@
             products p1_0 
         where
             p1_0.sku=?
-2026-05-02T23:01:27.819+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-PHONE-PLUS]
-2026-05-02T23:01:27.823+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.508+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-PHONE-PLUS]
+ - Diagnostics - apres premiere lecture entite
+   Transaction active                               : true
+   Entites managees                                 : 1
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+ - Diagnostics - update prix en REQUIRES_NEW
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 2
+   Connexions idle                                  : 8
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.510+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* update
         Product p 
     set
@@ -1202,9 +1633,16 @@
         price=? 
     where
         p1_0.sku=?
-2026-05-02T23:01:27.823+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:NUMERIC) <- [999.00]
-2026-05-02T23:01:27.823+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:VARCHAR) <- [SKU-PHONE-PLUS]
-2026-05-02T23:01:27.823+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.510+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:NUMERIC) <- [999.00]
+2026-05-06T22:00:06.510+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:VARCHAR) <- [SKU-PHONE-PLUS]
+ - Diagnostics - apres commit externe
+   Transaction active                               : true
+   Entites managees                                 : 1
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.510+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* select
         p 
     from
@@ -1220,10 +1658,24 @@
             products p1_0 
         where
             p1_0.sku=?
-2026-05-02T23:01:27.825+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-PHONE-PLUS]
+2026-05-06T22:00:06.510+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-PHONE-PLUS]
+ - Diagnostics - apres seconde lecture entite
+   Transaction active                               : true
+   Entites managees                                 : 1
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
    Meme instance Java                               : true
    Prix vu sans clear()                             : 899.00
-2026-05-02T23:01:27.826+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+ - Diagnostics - apres clear
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.519+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* select
         p 
     from
@@ -1239,10 +1691,24 @@
             products p1_0 
         where
             p1_0.sku=?
-2026-05-02T23:01:27.826+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-PHONE-PLUS]
+2026-05-06T22:00:06.521+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-PHONE-PLUS]
+ - Diagnostics - apres relecture apres clear
+   Transaction active                               : true
+   Entites managees                                 : 1
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
    Prix vu apres clear()                            : 999.00
  - En READ_COMMITTED, la base peut etre a jour, mais une entite deja managee reste l'instance de reference.
-2026-05-02T23:01:27.829+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+ - Diagnostics - update prix en REQUIRES_NEW
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.527+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* update
         Product p 
     set
@@ -1253,13 +1719,34 @@
         price=? 
     where
         p1_0.sku=?
-2026-05-02T23:01:27.829+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:NUMERIC) <- [899.00]
-2026-05-02T23:01:27.829+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:VARCHAR) <- [SKU-PHONE-PLUS]
+2026-05-06T22:00:06.527+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:NUMERIC) <- [899.00]
+2026-05-06T22:00:06.527+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:VARCHAR) <- [SKU-PHONE-PLUS]
+ - Diagnostics - fin
+   Transaction active                               : false
+   Entites managees                                 : n/a hors transaction
+   Connexions actives                               : 0
+   Connexions idle                                  : 10
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
 
 ================================================================================
 7. Propagation REQUIRED: l'appel interne participe a la transaction externe
 ================================================================================
-2026-05-02T23:01:27.830+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+ - Diagnostics - debut
+   Transaction active                               : false
+   Entites managees                                 : n/a hors transaction
+   Connexions actives                               : 0
+   Connexions idle                                  : 10
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+ - Diagnostics - lecture prix en REQUIRES_NEW read-only
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.531+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* select
         p.price 
     from
@@ -1271,8 +1758,15 @@
             products p1_0 
         where
             p1_0.sku=?
-2026-05-02T23:01:27.830+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-PHONE-PLUS]
-2026-05-02T23:01:27.832+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.532+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-PHONE-PLUS]
+ - Diagnostics - debut transaction externe REQUIRED
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.536+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* update
         Product p 
     set
@@ -1283,9 +1777,9 @@
         price=? 
     where
         p1_0.sku=?
-2026-05-02T23:01:27.832+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:NUMERIC) <- [1500.00]
-2026-05-02T23:01:27.832+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:VARCHAR) <- [SKU-PHONE-PLUS]
-2026-05-02T23:01:27.832+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.536+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:NUMERIC) <- [1500.00]
+2026-05-06T22:00:06.536+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:VARCHAR) <- [SKU-PHONE-PLUS]
+2026-05-06T22:00:06.537+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* select
         p.price 
     from
@@ -1297,9 +1791,23 @@
             products p1_0 
         where
             p1_0.sku=?
-2026-05-02T23:01:27.832+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-PHONE-PLUS]
+2026-05-06T22:00:06.537+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-PHONE-PLUS]
    Prix dans la transaction externe                 : 1500.00
-2026-05-02T23:01:27.836+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+ - Diagnostics - apres modification externe
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+ - Diagnostics - debut appel interne REQUIRED
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.540+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* update
         Product p 
     set
@@ -1310,9 +1818,9 @@
         price=? 
     where
         p1_0.sku=?
-2026-05-02T23:01:27.836+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:NUMERIC) <- [1600.00]
-2026-05-02T23:01:27.838+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:VARCHAR) <- [SKU-PHONE-PLUS]
-2026-05-02T23:01:27.839+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.541+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:NUMERIC) <- [1600.00]
+2026-05-06T22:00:06.543+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:VARCHAR) <- [SKU-PHONE-PLUS]
+2026-05-06T22:00:06.544+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* select
         p.price 
     from
@@ -1324,11 +1832,32 @@
             products p1_0 
         where
             p1_0.sku=?
-2026-05-02T23:01:27.840+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-PHONE-PLUS]
+2026-05-06T22:00:06.544+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-PHONE-PLUS]
    Prix dans l'appel interne REQUIRED               : 1600.00
+ - Diagnostics - apres modification interne REQUIRED
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
  - Le code externe continue, mais la transaction commune est rollback-only.
+ - Diagnostics - fin transaction externe avant rollback
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
    Exception au commit                              : UnexpectedRollbackException
-2026-05-02T23:01:27.842+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+ - Diagnostics - lecture prix en REQUIRES_NEW read-only
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.547+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* select
         p.price 
     from
@@ -1340,14 +1869,35 @@
             products p1_0 
         where
             p1_0.sku=?
-2026-05-02T23:01:27.845+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-PHONE-PLUS]
+2026-05-06T22:00:06.550+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-PHONE-PLUS]
    Prix apres rollback REQUIRED                     : 899.00
    Prix initial conserve                            : true
+ - Diagnostics - fin
+   Transaction active                               : false
+   Entites managees                                 : n/a hors transaction
+   Connexions actives                               : 0
+   Connexions idle                                  : 10
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
 
 ================================================================================
 8. Propagation REQUIRES_NEW: l'appel interne commit meme si l'externe rollback
 ================================================================================
-2026-05-02T23:01:27.849+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+ - Diagnostics - debut
+   Transaction active                               : false
+   Entites managees                                 : n/a hors transaction
+   Connexions actives                               : 0
+   Connexions idle                                  : 10
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+ - Diagnostics - lecture prix en REQUIRES_NEW read-only
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.552+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* select
         p.price 
     from
@@ -1359,8 +1909,15 @@
             products p1_0 
         where
             p1_0.sku=?
-2026-05-02T23:01:27.849+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-PHONE-PLUS]
-2026-05-02T23:01:27.849+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.552+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-PHONE-PLUS]
+ - Diagnostics - lecture prix en REQUIRES_NEW read-only
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.555+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* select
         p.price 
     from
@@ -1372,8 +1929,15 @@
             products p1_0 
         where
             p1_0.sku=?
-2026-05-02T23:01:27.849+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-HEADSET-BT]
-2026-05-02T23:01:27.858+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.555+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-HEADSET-BT]
+ - Diagnostics - debut transaction externe REQUIRED
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.560+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* update
         Product p 
     set
@@ -1384,9 +1948,9 @@
         price=? 
     where
         p1_0.sku=?
-2026-05-02T23:01:27.858+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:NUMERIC) <- [1700.00]
-2026-05-02T23:01:27.858+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:VARCHAR) <- [SKU-PHONE-PLUS]
-2026-05-02T23:01:27.859+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.560+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:NUMERIC) <- [1700.00]
+2026-05-06T22:00:06.560+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:VARCHAR) <- [SKU-PHONE-PLUS]
+2026-05-06T22:00:06.560+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* select
         p.price 
     from
@@ -1398,9 +1962,23 @@
             products p1_0 
         where
             p1_0.sku=?
-2026-05-02T23:01:27.859+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-PHONE-PLUS]
+2026-05-06T22:00:06.560+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-PHONE-PLUS]
    Prix smartphone dans transaction externe         : 1700.00
-2026-05-02T23:01:27.862+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+ - Diagnostics - apres modification externe
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+ - Diagnostics - debut transaction interne REQUIRES_NEW
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 2
+   Connexions idle                                  : 8
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.563+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* update
         Product p 
     set
@@ -1411,9 +1989,9 @@
         price=? 
     where
         p1_0.sku=?
-2026-05-02T23:01:27.862+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:NUMERIC) <- [80.00]
-2026-05-02T23:01:27.862+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:VARCHAR) <- [SKU-HEADSET-BT]
-2026-05-02T23:01:27.864+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.564+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:NUMERIC) <- [80.00]
+2026-05-06T22:00:06.564+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:VARCHAR) <- [SKU-HEADSET-BT]
+2026-05-06T22:00:06.565+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* select
         p.price 
     from
@@ -1425,9 +2003,37 @@
             products p1_0 
         where
             p1_0.sku=?
-2026-05-02T23:01:27.864+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-HEADSET-BT]
+2026-05-06T22:00:06.565+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-HEADSET-BT]
    Prix casque dans REQUIRES_NEW                    : 80.00
-2026-05-02T23:01:27.864+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+ - Diagnostics - fin transaction interne REQUIRES_NEW
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 2
+   Connexions idle                                  : 8
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+ - Diagnostics - apres retour REQUIRES_NEW
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+ - Diagnostics - fin transaction externe rollback-only
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+ - Diagnostics - lecture prix en REQUIRES_NEW read-only
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.567+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* select
         p.price 
     from
@@ -1439,8 +2045,15 @@
             products p1_0 
         where
             p1_0.sku=?
-2026-05-02T23:01:27.866+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-PHONE-PLUS]
-2026-05-02T23:01:27.866+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.570+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-PHONE-PLUS]
+ - Diagnostics - lecture prix en REQUIRES_NEW read-only
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.572+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* select
         p.price 
     from
@@ -1452,10 +2065,17 @@
             products p1_0 
         where
             p1_0.sku=?
-2026-05-02T23:01:27.866+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-HEADSET-BT]
+2026-05-06T22:00:06.572+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:VARCHAR) <- [SKU-HEADSET-BT]
    Smartphone apres rollback externe                : 899.00
    Casque apres commit REQUIRES_NEW                 : 80.00
-2026-05-02T23:01:27.870+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+ - Diagnostics - update prix en REQUIRES_NEW
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.576+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* update
         Product p 
     set
@@ -1466,9 +2086,16 @@
         price=? 
     where
         p1_0.sku=?
-2026-05-02T23:01:27.870+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:NUMERIC) <- [149.90]
-2026-05-02T23:01:27.870+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:VARCHAR) <- [SKU-HEADSET-BT]
-2026-05-02T23:01:27.872+02:00 DEBUG 26692 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
+2026-05-06T22:00:06.578+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:NUMERIC) <- [149.90]
+2026-05-06T22:00:06.578+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:VARCHAR) <- [SKU-HEADSET-BT]
+ - Diagnostics - update prix en REQUIRES_NEW
+   Transaction active                               : true
+   Entites managees                                 : 0
+   Connexions actives                               : 1
+   Connexions idle                                  : 9
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
+2026-05-06T22:00:06.580+02:00 DEBUG 27552 --- [hibernate-tutorial] [           main] org.hibernate.SQL                        : 
     /* update
         Product p 
     set
@@ -1479,8 +2106,15 @@
         price=? 
     where
         p1_0.sku=?
-2026-05-02T23:01:27.872+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:NUMERIC) <- [899.00]
-2026-05-02T23:01:27.872+02:00 TRACE 26692 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:VARCHAR) <- [SKU-PHONE-PLUS]
+2026-05-06T22:00:06.580+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (1:NUMERIC) <- [899.00]
+2026-05-06T22:00:06.580+02:00 TRACE 27552 --- [hibernate-tutorial] [           main] org.hibernate.orm.jdbc.bind              : binding parameter (2:VARCHAR) <- [SKU-PHONE-PLUS]
+ - Diagnostics - fin
+   Transaction active                               : false
+   Entites managees                                 : n/a hors transaction
+   Connexions actives                               : 0
+   Connexions idle                                  : 10
+   Connexions totales                               : 10
+   Threads attente connexion                        : 0
 ]]></system-out>
     <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
 WARNING: A Java agent has been loaded dynamically (C:\Users\drave\.m2\repository\net\bytebuddy\byte-buddy-agent\1.17.8\byte-buddy-agent-1.17.8.jar)

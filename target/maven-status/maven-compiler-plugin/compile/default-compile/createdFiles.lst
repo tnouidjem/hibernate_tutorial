@@ -3,6 +3,7 @@ com\example\hibernatetutorial\tutorial\HibernateAdvancedUseCases.class
 com\example\hibernatetutorial\domain\OrderStatus.class
 com\example\hibernatetutorial\repository\CustomerRepository.class
 com\example\hibernatetutorial\domain\Customer.class
+com\example\hibernatetutorial\tutorial\HibernateDiagnostics.class
 com\example\hibernatetutorial\repository\ProductRepository.class
 com\example\hibernatetutorial\repository\PurchaseOrderRepository.class
 com\example\hibernatetutorial\domain\PurchaseOrder.class

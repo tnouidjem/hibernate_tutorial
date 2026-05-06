@@ -64,3 +64,13 @@ Les logs SQL sont volontairement actives. Pendant la presentation, demandez aux 
 - le nombre de requetes SQL reellement executees;
 - le moment ou les `UPDATE` partent en base;
 - la difference entre une entite managee, detachee et un simple DTO.
+
+Chaque use case affiche aussi des diagnostics:
+
+- `Entites managees`: nombre d'entites actuellement suivies par le Persistence Context Hibernate.
+- `Connexions actives`: connexions HikariCP actuellement empruntees au pool.
+- `Connexions idle`: connexions ouvertes mais disponibles.
+- `Connexions totales`: taille courante du pool.
+- `Threads attente connexion`: appels en attente d'une connexion.
+
+Ces chiffres aident a montrer que les entites chargees restent en memoire tant que le Persistence Context reste actif, et que les transactions empruntent des connexions au pool seulement pendant les acces base necessaires.
