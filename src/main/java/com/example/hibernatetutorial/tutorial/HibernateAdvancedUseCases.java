@@ -13,9 +13,9 @@ import java.math.BigDecimal;
 @Service
 public class HibernateAdvancedUseCases {
 
-    private static final String PHONE_SKU = "SKU-PHONE-PLUS";
-    private static final String HEADSET_SKU = "SKU-HEADSET-BT";
-    private static final String MOUSE_SKU = "SKU-MOUSE-WIRELESS";
+    private static final String PHONE_PRODUCT_CODE = "CODE-PHONE-PLUS";
+    private static final String HEADSET_PRODUCT_CODE = "CODE-HEADSET-BT";
+    private static final String MOUSE_PRODUCT_CODE = "CODE-MOUSE-WIRELESS";
 
     private final EntityManager entityManager;
     private final PlatformTransactionManager transactionManager;
@@ -62,7 +62,7 @@ public class HibernateAdvancedUseCases {
      * ne masque pas le comportement reel du niveau d'isolation de la base.
      */
     private void compareIsolationLevel(String label, int isolationLevel, BigDecimal concurrentPrice) {
-        BigDecimal originalPrice = readPriceInNewTransaction(MOUSE_SKU);
+        BigDecimal originalPrice = readPriceInNewTransaction(MOUSE_PRODUCT_CODE);
 
         console.step("Isolation " + label + ": transaction A lit, transaction B modifie et commit, transaction A relit.");
 
@@ -72,15 +72,15 @@ public class HibernateAdvancedUseCases {
 
         transactionA.execute(status -> {
             diagnostics.print(label + " - debut transaction A");
-            BigDecimal firstRead = readPriceScalar(MOUSE_SKU);
+            BigDecimal firstRead = readPriceScalar(MOUSE_PRODUCT_CODE);
             diagnostics.print(label + " - apres premiere lecture scalaire");
 
-            updatePriceInNewCommittedTransaction(MOUSE_SKU, concurrentPrice);
+            updatePriceInNewCommittedTransaction(MOUSE_PRODUCT_CODE, concurrentPrice);
             diagnostics.print(label + " - apres commit transaction B");
 
             // On lit un scalaire et non une entite. Sinon le cache de premier niveau pourrait masquer l'effet
             // du niveau d'isolation en retournant la meme instance deja presente dans le Persistence Context.
-            BigDecimal secondRead = readPriceScalar(MOUSE_SKU);
+            BigDecimal secondRead = readPriceScalar(MOUSE_PRODUCT_CODE);
             diagnostics.print(label + " - apres seconde lecture scalaire");
 
             console.value(label + " - premiere lecture", firstRead);
@@ -89,7 +89,7 @@ public class HibernateAdvancedUseCases {
             return null;
         });
 
-        updatePriceInNewCommittedTransaction(MOUSE_SKU, originalPrice);
+        updatePriceInNewCommittedTransaction(MOUSE_PRODUCT_CODE, originalPrice);
     }
 
     /**
@@ -101,7 +101,7 @@ public class HibernateAdvancedUseCases {
         console.title("6. Isolation et cache de premier niveau: une entite managee peut masquer un commit externe");
         diagnostics.print("debut");
 
-        BigDecimal originalPrice = readPriceInNewTransaction(PHONE_SKU);
+        BigDecimal originalPrice = readPriceInNewTransaction(PHONE_PRODUCT_CODE);
         BigDecimal concurrentPrice = originalPrice.add(new BigDecimal("100.00"));
 
         TransactionTemplate transactionA = new TransactionTemplate(transactionManager);
@@ -111,17 +111,17 @@ public class HibernateAdvancedUseCases {
         transactionA.execute(status -> {
             diagnostics.print("debut transaction A");
             var firstEntity = entityManager
-                    .createQuery("select p from Product p where p.sku = :sku", com.example.hibernatetutorial.domain.Product.class)
-                    .setParameter("sku", PHONE_SKU)
+                    .createQuery("select p from Product p where p.productCode = :productCode", com.example.hibernatetutorial.domain.Product.class)
+                    .setParameter("productCode", PHONE_PRODUCT_CODE)
                     .getSingleResult();
             diagnostics.print("apres premiere lecture entite");
 
-            updatePriceInNewCommittedTransaction(PHONE_SKU, concurrentPrice);
+            updatePriceInNewCommittedTransaction(PHONE_PRODUCT_CODE, concurrentPrice);
             diagnostics.print("apres commit externe");
 
             var secondEntity = entityManager
-                    .createQuery("select p from Product p where p.sku = :sku", com.example.hibernatetutorial.domain.Product.class)
-                    .setParameter("sku", PHONE_SKU)
+                    .createQuery("select p from Product p where p.productCode = :productCode", com.example.hibernatetutorial.domain.Product.class)
+                    .setParameter("productCode", PHONE_PRODUCT_CODE)
                     .getSingleResult();
             diagnostics.print("apres seconde lecture entite");
 
@@ -132,8 +132,8 @@ public class HibernateAdvancedUseCases {
             diagnostics.print("apres clear");
 
             var afterClear = entityManager
-                    .createQuery("select p from Product p where p.sku = :sku", com.example.hibernatetutorial.domain.Product.class)
-                    .setParameter("sku", PHONE_SKU)
+                    .createQuery("select p from Product p where p.productCode = :productCode", com.example.hibernatetutorial.domain.Product.class)
+                    .setParameter("productCode", PHONE_PRODUCT_CODE)
                     .getSingleResult();
             diagnostics.print("apres relecture apres clear");
 
@@ -142,7 +142,7 @@ public class HibernateAdvancedUseCases {
             return null;
         });
 
-        updatePriceInNewCommittedTransaction(PHONE_SKU, originalPrice);
+        updatePriceInNewCommittedTransaction(PHONE_PRODUCT_CODE, originalPrice);
         diagnostics.print("fin");
     }
 
@@ -155,7 +155,7 @@ public class HibernateAdvancedUseCases {
         console.title("7. Propagation REQUIRED: l'appel interne participe a la transaction externe");
         diagnostics.print("debut");
 
-        BigDecimal originalPrice = readPriceInNewTransaction(PHONE_SKU);
+        BigDecimal originalPrice = readPriceInNewTransaction(PHONE_PRODUCT_CODE);
 
         TransactionTemplate outerRequired = new TransactionTemplate(transactionManager);
         outerRequired.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRED);
@@ -166,14 +166,14 @@ public class HibernateAdvancedUseCases {
         try {
             outerRequired.execute(outerStatus -> {
                 diagnostics.print("debut transaction externe REQUIRED");
-                updatePriceScalar(PHONE_SKU, new BigDecimal("1500.00"));
-                console.value("Prix dans la transaction externe", readPriceScalar(PHONE_SKU));
+                updatePriceScalar(PHONE_PRODUCT_CODE, new BigDecimal("1500.00"));
+                console.value("Prix dans la transaction externe", readPriceScalar(PHONE_PRODUCT_CODE));
                 diagnostics.print("apres modification externe");
 
                 innerRequired.execute(innerStatus -> {
                     diagnostics.print("debut appel interne REQUIRED");
-                    updatePriceScalar(PHONE_SKU, new BigDecimal("1600.00"));
-                    console.value("Prix dans l'appel interne REQUIRED", readPriceScalar(PHONE_SKU));
+                    updatePriceScalar(PHONE_PRODUCT_CODE, new BigDecimal("1600.00"));
+                    console.value("Prix dans l'appel interne REQUIRED", readPriceScalar(PHONE_PRODUCT_CODE));
                     diagnostics.print("apres modification interne REQUIRED");
 
                     // REQUIRED ne cree pas une transaction separee ici. Marquer rollback-only impacte donc
@@ -190,7 +190,7 @@ public class HibernateAdvancedUseCases {
             console.value("Exception au commit", ex.getClass().getSimpleName());
         }
 
-        BigDecimal priceAfterRollback = readPriceInNewTransaction(PHONE_SKU);
+        BigDecimal priceAfterRollback = readPriceInNewTransaction(PHONE_PRODUCT_CODE);
         console.value("Prix apres rollback REQUIRED", priceAfterRollback);
         console.value("Prix initial conserve", priceAfterRollback.compareTo(originalPrice) == 0);
         diagnostics.print("fin");
@@ -205,8 +205,8 @@ public class HibernateAdvancedUseCases {
         console.title("8. Propagation REQUIRES_NEW: l'appel interne commit meme si l'externe rollback");
         diagnostics.print("debut");
 
-        BigDecimal phoneOriginalPrice = readPriceInNewTransaction(PHONE_SKU);
-        BigDecimal headsetOriginalPrice = readPriceInNewTransaction(HEADSET_SKU);
+        BigDecimal phoneOriginalPrice = readPriceInNewTransaction(PHONE_PRODUCT_CODE);
+        BigDecimal headsetOriginalPrice = readPriceInNewTransaction(HEADSET_PRODUCT_CODE);
 
         TransactionTemplate outerRequired = new TransactionTemplate(transactionManager);
         outerRequired.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRED);
@@ -216,14 +216,14 @@ public class HibernateAdvancedUseCases {
 
         outerRequired.execute(outerStatus -> {
             diagnostics.print("debut transaction externe REQUIRED");
-            updatePriceScalar(PHONE_SKU, new BigDecimal("1700.00"));
-            console.value("Prix smartphone dans transaction externe", readPriceScalar(PHONE_SKU));
+            updatePriceScalar(PHONE_PRODUCT_CODE, new BigDecimal("1700.00"));
+            console.value("Prix smartphone dans transaction externe", readPriceScalar(PHONE_PRODUCT_CODE));
             diagnostics.print("apres modification externe");
 
             innerRequiresNew.execute(innerStatus -> {
                 diagnostics.print("debut transaction interne REQUIRES_NEW");
-                updatePriceScalar(HEADSET_SKU, new BigDecimal("80.00"));
-                console.value("Prix casque dans REQUIRES_NEW", readPriceScalar(HEADSET_SKU));
+                updatePriceScalar(HEADSET_PRODUCT_CODE, new BigDecimal("80.00"));
+                console.value("Prix casque dans REQUIRES_NEW", readPriceScalar(HEADSET_PRODUCT_CODE));
                 diagnostics.print("fin transaction interne REQUIRES_NEW");
                 return null;
             });
@@ -235,48 +235,48 @@ public class HibernateAdvancedUseCases {
             return null;
         });
 
-        BigDecimal phoneAfterRollback = readPriceInNewTransaction(PHONE_SKU);
-        BigDecimal headsetAfterCommit = readPriceInNewTransaction(HEADSET_SKU);
+        BigDecimal phoneAfterRollback = readPriceInNewTransaction(PHONE_PRODUCT_CODE);
+        BigDecimal headsetAfterCommit = readPriceInNewTransaction(HEADSET_PRODUCT_CODE);
 
         console.value("Smartphone apres rollback externe", phoneAfterRollback);
         console.value("Casque apres commit REQUIRES_NEW", headsetAfterCommit);
 
-        updatePriceInNewCommittedTransaction(HEADSET_SKU, headsetOriginalPrice);
-        updatePriceInNewCommittedTransaction(PHONE_SKU, phoneOriginalPrice);
+        updatePriceInNewCommittedTransaction(HEADSET_PRODUCT_CODE, headsetOriginalPrice);
+        updatePriceInNewCommittedTransaction(PHONE_PRODUCT_CODE, phoneOriginalPrice);
         diagnostics.print("fin");
     }
 
-    private BigDecimal readPriceInNewTransaction(String sku) {
+    private BigDecimal readPriceInNewTransaction(String productCode) {
         TransactionTemplate template = new TransactionTemplate(transactionManager);
         template.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRES_NEW);
         template.setReadOnly(true);
         return template.execute(status -> {
             diagnostics.print("lecture prix en REQUIRES_NEW read-only");
-            return readPriceScalar(sku);
+            return readPriceScalar(productCode);
         });
     }
 
-    private void updatePriceInNewCommittedTransaction(String sku, BigDecimal price) {
+    private void updatePriceInNewCommittedTransaction(String productCode, BigDecimal price) {
         TransactionTemplate template = new TransactionTemplate(transactionManager);
         template.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRES_NEW);
         template.executeWithoutResult(status -> {
             diagnostics.print("update prix en REQUIRES_NEW");
-            updatePriceScalar(sku, price);
+            updatePriceScalar(productCode, price);
         });
     }
 
-    private BigDecimal readPriceScalar(String sku) {
+    private BigDecimal readPriceScalar(String productCode) {
         return entityManager
-                .createQuery("select p.price from Product p where p.sku = :sku", BigDecimal.class)
-                .setParameter("sku", sku)
+                .createQuery("select p.price from Product p where p.productCode = :productCode", BigDecimal.class)
+                .setParameter("productCode", productCode)
                 .getSingleResult();
     }
 
-    private void updatePriceScalar(String sku, BigDecimal price) {
+    private void updatePriceScalar(String productCode, BigDecimal price) {
         entityManager
-                .createQuery("update Product p set p.price = :price where p.sku = :sku")
+                .createQuery("update Product p set p.price = :price where p.productCode = :productCode")
                 .setParameter("price", price)
-                .setParameter("sku", sku)
+                .setParameter("productCode", productCode)
                 .executeUpdate();
     }
 }

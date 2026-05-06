@@ -43,11 +43,11 @@ public class DataSeeder {
         customerRepository.deleteAllInBatch();
         productRepository.deleteAllInBatch();
 
-        Product laptop = new Product("SKU-LAPTOP-PRO", "Ultrabook 14 pouces", new BigDecimal("1299.00"), 25);
-        Product phone = new Product("SKU-PHONE-PLUS", "Smartphone Plus", new BigDecimal("899.00"), 40);
-        Product headset = new Product("SKU-HEADSET-BT", "Casque Bluetooth", new BigDecimal("149.90"), 80);
-        Product keyboard = new Product("SKU-KEYBOARD-MECH", "Clavier mecanique", new BigDecimal("119.90"), 55);
-        Product mouse = new Product("SKU-MOUSE-WIRELESS", "Souris sans fil", new BigDecimal("49.90"), 120);
+        Product laptop = new Product("CODE-LAPTOP-PRO", "Ultrabook 14 pouces", new BigDecimal("1299.00"), 25);
+        Product phone = new Product("CODE-PHONE-PLUS", "Smartphone Plus", new BigDecimal("899.00"), 40);
+        Product headset = new Product("CODE-HEADSET-BT", "Casque Bluetooth", new BigDecimal("149.90"), 80);
+        Product keyboard = new Product("CODE-KEYBOARD-MECH", "Clavier mecanique", new BigDecimal("119.90"), 55);
+        Product mouse = new Product("CODE-MOUSE-WIRELESS", "Souris sans fil", new BigDecimal("49.90"), 120);
 
         productRepository.saveAll(List.of(laptop, phone, headset, keyboard, mouse));
 

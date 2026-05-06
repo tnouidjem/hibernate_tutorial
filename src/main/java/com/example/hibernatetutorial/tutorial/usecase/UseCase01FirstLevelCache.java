@@ -11,7 +11,7 @@ import org.springframework.transaction.interceptor.TransactionAspectSupport;
 
 import java.math.BigDecimal;
 
-import static com.example.hibernatetutorial.tutorial.usecase.UseCaseSkus.LAPTOP_SKU;
+import static com.example.hibernatetutorial.tutorial.usecase.UseCaseProductCodes.LAPTOP_PRODUCT_CODE;
 
 @Component
 public class UseCase01FirstLevelCache implements HibernateUseCase {
@@ -49,7 +49,7 @@ public class UseCase01FirstLevelCache implements HibernateUseCase {
         TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
 
         // ETAPE 1.2 - Recuperer l'id du produit qui servira aux lectures EntityManager.
-        Long productId = productRepository.findIdBySku(LAPTOP_SKU);
+        Long productId = productRepository.findIdByProductCode(LAPTOP_PRODUCT_CODE);
 
         // ETAPE 1.3 - Premier acces: Hibernate execute un SELECT et stocke l'entite dans le Persistence Context.
         Product firstLoad = entityManager.find(Product.class, productId);

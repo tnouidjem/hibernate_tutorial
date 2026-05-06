@@ -12,7 +12,7 @@ import org.springframework.transaction.support.TransactionSynchronizationManager
 
 import java.math.BigDecimal;
 
-import static com.example.hibernatetutorial.tutorial.usecase.UseCaseSkus.KEYBOARD_SKU;
+import static com.example.hibernatetutorial.tutorial.usecase.UseCaseProductCodes.KEYBOARD_PRODUCT_CODE;
 
 @Component
 public class UseCase02bReadOnlyTransactionDirtyChecking implements HibernateUseCase {
@@ -50,7 +50,7 @@ public class UseCase02bReadOnlyTransactionDirtyChecking implements HibernateUseC
         Session session = entityManager.unwrap(Session.class);
 
         // ETAPE 2b.2 - Charger le clavier et memoriser son prix initial.
-        Product keyboard = productRepository.findBySku(KEYBOARD_SKU).orElseThrow();
+        Product keyboard = productRepository.findByProductCode(KEYBOARD_PRODUCT_CODE).orElseThrow();
         diagnostics.print("apres lecture clavier");
         BigDecimal originalPrice = keyboard.getPrice();
         BigDecimal newPrice = keyboard.getPrice().add(new BigDecimal("10.00"));

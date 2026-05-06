@@ -7,7 +7,7 @@ import com.example.hibernatetutorial.tutorial.TutorialConsole;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import static com.example.hibernatetutorial.tutorial.usecase.UseCaseSkus.LAPTOP_SKU;
+import static com.example.hibernatetutorial.tutorial.usecase.UseCaseProductCodes.LAPTOP_PRODUCT_CODE;
 
 @Component
 public class UseCase00bRepositoryCallsShareFirstLevelCache implements HibernateUseCase {
@@ -29,22 +29,22 @@ public class UseCase00bRepositoryCallsShareFirstLevelCache implements HibernateU
     /**
      * But de la demonstration: montrer que deux appels repository successifs peuvent retourner la meme instance Java.
      * Explication technique: dans une transaction, Spring Data JPA utilise l'EntityManager lie a la transaction.
-     * Une requete par critere comme findBySku(...) execute toutefois le SELECT a chaque appel, car le cache de
+     * Une requete par critere comme findByProductCode(...) execute toutefois le SELECT a chaque appel, car le cache de
      * premier niveau est indexe par id. Hibernate reutilise ensuite l'instance deja managee pour cet id.
      */
     @Override
     @Transactional
     public void run() {
-        console.title("0b. Repository findBySku: deux SELECT, mais une seule instance Java");
+        console.title("0b. Repository findByProductCode: deux SELECT, mais une seule instance Java");
         diagnostics.print("debut");
 
         // ETAPE 0b.1 - Executer un premier appel Spring Data JPA par critere.
-        Product firstRepositoryLoad = productRepository.findBySku(LAPTOP_SKU).orElseThrow();
-        diagnostics.print("apres premier findBySku");
+        Product firstRepositoryLoad = productRepository.findByProductCode(LAPTOP_PRODUCT_CODE).orElseThrow();
+        diagnostics.print("apres premier findByProductCode");
 
         // ETAPE 0b.2 - Executer le meme appel: le SELECT repart, mais Hibernate reutilise l'instance managee.
-        Product secondRepositoryLoad = productRepository.findBySku(LAPTOP_SKU).orElseThrow();
-        diagnostics.print("apres second findBySku");
+        Product secondRepositoryLoad = productRepository.findByProductCode(LAPTOP_PRODUCT_CODE).orElseThrow();
+        diagnostics.print("apres second findByProductCode");
 
         // ETAPE 0b.3 - Confirmer que les deux variables pointent vers la meme instance Java.
         console.value("Meme instance Java", firstRepositoryLoad == secondRepositoryLoad);

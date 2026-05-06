@@ -13,7 +13,7 @@ import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import java.math.BigDecimal;
 import java.util.List;
 
-import static com.example.hibernatetutorial.tutorial.usecase.UseCaseSkus.PHONE_SKU;
+import static com.example.hibernatetutorial.tutorial.usecase.UseCaseProductCodes.PHONE_PRODUCT_CODE;
 
 @Component
 public class UseCase04bCommitFlushModeBeforeQuery implements HibernateUseCase {
@@ -54,7 +54,7 @@ public class UseCase04bCommitFlushModeBeforeQuery implements HibernateUseCase {
         entityManager.setFlushMode(FlushModeType.COMMIT);
         try {
             // ETAPE 4b.3 - Charger puis modifier le smartphone sans flush immediat.
-            Product phone = productRepository.findBySku(PHONE_SKU).orElseThrow();
+            Product phone = productRepository.findByProductCode(PHONE_PRODUCT_CODE).orElseThrow();
             phone.setPrice(new BigDecimal("1799.00"));
             diagnostics.print("apres modification smartphone");
 
@@ -64,7 +64,7 @@ public class UseCase04bCommitFlushModeBeforeQuery implements HibernateUseCase {
 
             // ETAPE 4b.5 - Afficher la difference de visibilite par rapport au flush AUTO.
             console.step("Regardez les logs SQL: le SELECT part sans UPDATE prealable du smartphone.");
-            console.value("Smartphone present dans le resultat", expensiveProducts.stream().anyMatch(p -> PHONE_SKU.equals(p.getSku())));
+            console.value("Smartphone present dans le resultat", expensiveProducts.stream().anyMatch(p -> PHONE_PRODUCT_CODE.equals(p.getProductCode())));
             console.step("La transaction est rollback-only pour eviter de conserver ce prix fictif.");
         } finally {
             // ETAPE 4b.6 - Restaurer le flush mode precedent pour ne pas affecter les autres demonstrations.

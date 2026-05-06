@@ -12,10 +12,10 @@ import java.util.Optional;
 
 public interface ProductRepository extends JpaRepository<Product, Long> {
 
-    Optional<Product> findBySku(String sku);
+    Optional<Product> findByProductCode(String productCode);
 
-    @Query("select p.id from Product p where p.sku = :sku")
-    Long findIdBySku(@Param("sku") String sku);
+    @Query("select p.id from Product p where p.productCode = :productCode")
+    Long findIdByProductCode(@Param("productCode") String productCode);
 
     @Query("""
             select p
@@ -27,14 +27,14 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
 
     @Query("""
             select new com.example.hibernatetutorial.dto.ProductSalesDto(
-                p.sku,
+                p.productCode,
                 p.name,
                 sum(l.quantity),
                 sum(l.unitPriceSnapshot * l.quantity)
             )
             from OrderLine l
             join l.product p
-            group by p.sku, p.name
+            group by p.productCode, p.name
             order by sum(l.quantity) desc
             """)
     List<ProductSalesDto> findSalesSummary();

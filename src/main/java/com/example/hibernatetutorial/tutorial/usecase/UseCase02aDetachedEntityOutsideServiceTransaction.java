@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 
-import static com.example.hibernatetutorial.tutorial.usecase.UseCaseSkus.HEADSET_SKU;
+import static com.example.hibernatetutorial.tutorial.usecase.UseCaseProductCodes.HEADSET_PRODUCT_CODE;
 
 @Component
 public class UseCase02aDetachedEntityOutsideServiceTransaction implements HibernateUseCase {
@@ -38,7 +38,7 @@ public class UseCase02aDetachedEntityOutsideServiceTransaction implements Hibern
         diagnostics.print("debut");
 
         // ETAPE 2a.1 - Charger le produit via le repository sans transaction de service englobante.
-        Product headset = productRepository.findBySku(HEADSET_SKU).orElseThrow();
+        Product headset = productRepository.findByProductCode(HEADSET_PRODUCT_CODE).orElseThrow();
         diagnostics.print("apres appel repository");
         BigDecimal originalPrice = headset.getPrice();
 
@@ -46,7 +46,7 @@ public class UseCase02aDetachedEntityOutsideServiceTransaction implements Hibern
         headset.setPrice(new BigDecimal("1.00"));
 
         // ETAPE 2a.3 - Relire le produit depuis la base pour comparer avec l'objet modifie en memoire.
-        Product reloaded = productRepository.findBySku(HEADSET_SKU).orElseThrow();
+        Product reloaded = productRepository.findByProductCode(HEADSET_PRODUCT_CODE).orElseThrow();
 
         // ETAPE 2a.4 - Afficher la preuve que la modification locale n'a pas ete persistee.
         console.step("Le changement local n'est pas persiste, car aucun Persistence Context n'est actif autour du use case.");

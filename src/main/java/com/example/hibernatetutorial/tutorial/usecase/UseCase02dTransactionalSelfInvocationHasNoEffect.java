@@ -10,7 +10,7 @@ import org.springframework.transaction.support.TransactionSynchronizationManager
 
 import java.math.BigDecimal;
 
-import static com.example.hibernatetutorial.tutorial.usecase.UseCaseSkus.HEADSET_SKU;
+import static com.example.hibernatetutorial.tutorial.usecase.UseCaseProductCodes.HEADSET_PRODUCT_CODE;
 
 @Component
 public class UseCase02dTransactionalSelfInvocationHasNoEffect implements HibernateUseCase {
@@ -40,14 +40,14 @@ public class UseCase02dTransactionalSelfInvocationHasNoEffect implements Hiberna
         diagnostics.print("debut");
 
         // ETAPE 2c.1 - Lire le prix initial avant l'appel interne.
-        Product headsetBefore = productRepository.findBySku(HEADSET_SKU).orElseThrow();
+        Product headsetBefore = productRepository.findByProductCode(HEADSET_PRODUCT_CODE).orElseThrow();
         BigDecimal originalPrice = headsetBefore.getPrice();
 
         // ETAPE 2c.2 - Appeler directement une methode annotee @Transactional de la meme classe.
         methodAnnotatedTransactionalButCalledFromSameClass(new BigDecimal("2.00"));
 
         // ETAPE 2c.3 - Relire le produit apres l'appel interne.
-        Product headsetAfter = productRepository.findBySku(HEADSET_SKU).orElseThrow();
+        Product headsetAfter = productRepository.findByProductCode(HEADSET_PRODUCT_CODE).orElseThrow();
 
         // ETAPE 2c.4 - Comparer les prix pour montrer que la transaction annotee n'a pas ete appliquee.
         console.value("Prix avant self-invocation", originalPrice);
@@ -71,7 +71,7 @@ public class UseCase02dTransactionalSelfInvocationHasNoEffect implements Hiberna
         console.value("Transaction active dans la methode annotee", transactionActive);
 
         // ETAPE 2c-cible.2 - Charger le produit depuis le repository appele par la methode cible.
-        Product headset = productRepository.findBySku(HEADSET_SKU).orElseThrow();
+        Product headset = productRepository.findByProductCode(HEADSET_PRODUCT_CODE).orElseThrow();
 
         // ETAPE 2c-cible.3 - Modifier l'entite detachee: le setter ne sera pas flushe.
         headset.setPrice(newPrice);

@@ -53,6 +53,6 @@ public class UseCase03DtoProjectionInReadOnlyTransaction implements HibernateUse
         diagnostics.print("apres projection DTO");
 
         // ETAPE 3.3 - Afficher les resultats agreges retournes par la projection.
-        sales.forEach(dto -> console.value(dto.sku(), dto.quantitySold() + " ventes, CA " + dto.revenue() + " EUR"));
+        sales.forEach(dto -> console.value(dto.productCode(), dto.quantitySold() + " ventes, CA " + dto.revenue() + " EUR"));
     }
 }

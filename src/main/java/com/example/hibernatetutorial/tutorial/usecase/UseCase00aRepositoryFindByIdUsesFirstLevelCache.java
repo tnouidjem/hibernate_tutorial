@@ -7,7 +7,7 @@ import com.example.hibernatetutorial.tutorial.TutorialConsole;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import static com.example.hibernatetutorial.tutorial.usecase.UseCaseSkus.LAPTOP_SKU;
+import static com.example.hibernatetutorial.tutorial.usecase.UseCaseProductCodes.LAPTOP_PRODUCT_CODE;
 
 @Component
 public class UseCase00aRepositoryFindByIdUsesFirstLevelCache implements HibernateUseCase {
@@ -39,7 +39,7 @@ public class UseCase00aRepositoryFindByIdUsesFirstLevelCache implements Hibernat
         diagnostics.print("debut");
 
         // ETAPE 0a.1 - Recuperer l'identifiant qui servira aux deux lectures par cle primaire.
-        Long productId = productRepository.findIdBySku(LAPTOP_SKU);
+        Long productId = productRepository.findIdByProductCode(LAPTOP_PRODUCT_CODE);
 
         // ETAPE 0a.2 - Charger une premiere fois le produit depuis le repository.
         Product firstRepositoryLoad = productRepository.findById(productId).orElseThrow();

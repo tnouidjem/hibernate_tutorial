@@ -148,10 +148,10 @@ public class UseCase04cPersistenceContextGrowthInLoop implements HibernateUseCas
         entityManager.persist(customer);
 
         List<Product> products = List.of(
-                new Product("SKU-BULK-01", "Produit bulk 1", new BigDecimal("10.00"), 10_000),
-                new Product("SKU-BULK-02", "Produit bulk 2", new BigDecimal("20.00"), 10_000),
-                new Product("SKU-BULK-03", "Produit bulk 3", new BigDecimal("30.00"), 10_000),
-                new Product("SKU-BULK-04", "Produit bulk 4", new BigDecimal("40.00"), 10_000)
+                new Product("CODE-BULK-01", "Produit bulk 1", new BigDecimal("10.00"), 10_000),
+                new Product("CODE-BULK-02", "Produit bulk 2", new BigDecimal("20.00"), 10_000),
+                new Product("CODE-BULK-03", "Produit bulk 3", new BigDecimal("30.00"), 10_000),
+                new Product("CODE-BULK-04", "Produit bulk 4", new BigDecimal("40.00"), 10_000)
         );
         products.forEach(entityManager::persist);
 

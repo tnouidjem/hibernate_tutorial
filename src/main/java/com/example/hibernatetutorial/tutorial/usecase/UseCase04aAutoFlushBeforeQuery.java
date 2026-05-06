@@ -11,7 +11,7 @@ import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import java.math.BigDecimal;
 import java.util.List;
 
-import static com.example.hibernatetutorial.tutorial.usecase.UseCaseSkus.LAPTOP_SKU;
+import static com.example.hibernatetutorial.tutorial.usecase.UseCaseProductCodes.LAPTOP_PRODUCT_CODE;
 
 @Component
 public class UseCase04aAutoFlushBeforeQuery implements HibernateUseCase {
@@ -45,7 +45,7 @@ public class UseCase04aAutoFlushBeforeQuery implements HibernateUseCase {
         TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
 
         // ETAPE 4a.2 - Charger puis modifier le laptop dans le Persistence Context.
-        Product laptop = productRepository.findBySku(LAPTOP_SKU).orElseThrow();
+        Product laptop = productRepository.findByProductCode(LAPTOP_PRODUCT_CODE).orElseThrow();
         laptop.setPrice(new BigDecimal("1999.00"));
         diagnostics.print("apres modification laptop");
 
@@ -55,7 +55,7 @@ public class UseCase04aAutoFlushBeforeQuery implements HibernateUseCase {
 
         // ETAPE 4a.4 - Verifier que la requete voit le laptop modifie avant le rollback final.
         console.step("Regardez les logs SQL: l'UPDATE du laptop apparait avant le SELECT des produits chers.");
-        console.value("Laptop present dans le resultat", expensiveProducts.stream().anyMatch(p -> LAPTOP_SKU.equals(p.getSku())));
+        console.value("Laptop present dans le resultat", expensiveProducts.stream().anyMatch(p -> LAPTOP_PRODUCT_CODE.equals(p.getProductCode())));
         console.step("La transaction est marquee rollback-only pour garder les donnees initiales apres la demo.");
     }
 }

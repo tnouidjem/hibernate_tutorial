@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.example.hibernatetutorial.HibernateTutorialApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.767 s -- in com.example.hibernatetutorial.HibernateTutorialApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.63 s -- in com.example.hibernatetutorial.HibernateTutorialApplicationTests

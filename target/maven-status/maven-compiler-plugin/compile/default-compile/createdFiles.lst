@@ -5,6 +5,7 @@ com\example\hibernatetutorial\repository\CustomerRepository.class
 com\example\hibernatetutorial\tutorial\usecase\UseCase04aAutoFlushBeforeQuery.class
 com\example\hibernatetutorial\repository\ProductRepository.class
 com\example\hibernatetutorial\tutorial\usecase\UseCase04bCommitFlushModeBeforeQuery.class
+com\example\hibernatetutorial\tutorial\usecase\UseCaseProductCodes.class
 com\example\hibernatetutorial\tutorial\usecase\UseCase00aRepositoryFindByIdUsesFirstLevelCache.class
 com\example\hibernatetutorial\tutorial\usecase\UseCase02cReadOnlySaveWasNotCommittedVerification.class
 com\example\hibernatetutorial\tutorial\usecase\UseCase04cPersistenceContextGrowthInLoop.class
@@ -21,7 +22,6 @@ com\example\hibernatetutorial\tutorial\usecase\HibernateUseCase.class
 com\example\hibernatetutorial\tutorial\usecase\UseCase00bRepositoryCallsShareFirstLevelCache.class
 com\example\hibernatetutorial\tutorial\usecase\UseCase02eLazyLoadingOutsideTransaction.class
 com\example\hibernatetutorial\tutorial\usecase\UseCase03DtoProjectionInReadOnlyTransaction.class
-com\example\hibernatetutorial\tutorial\usecase\UseCaseSkus.class
 com\example\hibernatetutorial\domain\PurchaseOrder.class
 com\example\hibernatetutorial\tutorial\TutorialConsole.class
 com\example\hibernatetutorial\domain\OrderLine.class

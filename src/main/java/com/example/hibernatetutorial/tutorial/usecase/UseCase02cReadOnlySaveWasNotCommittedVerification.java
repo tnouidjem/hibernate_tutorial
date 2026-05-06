@@ -6,7 +6,7 @@ import com.example.hibernatetutorial.tutorial.HibernateDiagnostics;
 import com.example.hibernatetutorial.tutorial.TutorialConsole;
 import org.springframework.stereotype.Component;
 
-import static com.example.hibernatetutorial.tutorial.usecase.UseCaseSkus.KEYBOARD_SKU;
+import static com.example.hibernatetutorial.tutorial.usecase.UseCaseProductCodes.KEYBOARD_PRODUCT_CODE;
 
 @Component
 public class UseCase02cReadOnlySaveWasNotCommittedVerification implements HibernateUseCase {
@@ -36,7 +36,7 @@ public class UseCase02cReadOnlySaveWasNotCommittedVerification implements Hibern
         diagnostics.print("debut");
 
         // ETAPE 2b-verification.1 - Relire le clavier apres la transaction read-only precedente.
-        Product keyboard = productRepository.findBySku(KEYBOARD_SKU).orElseThrow();
+        Product keyboard = productRepository.findByProductCode(KEYBOARD_PRODUCT_CODE).orElseThrow();
 
         // ETAPE 2b-verification.2 - Afficher le prix effectivement conserve en base.
         console.value("Prix relu apres transaction read-only", keyboard.getPrice());

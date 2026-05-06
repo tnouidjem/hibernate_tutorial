@@ -18,7 +18,7 @@ public class Product {
     private Long id;
 
     @Column(nullable = false, unique = true)
-    private String sku;
+    private String productCode;
 
     @Column(nullable = false)
     private String name;
@@ -33,8 +33,8 @@ public class Product {
         // Constructeur requis par JPA.
     }
 
-    public Product(String sku, String name, BigDecimal price, int stockQuantity) {
-        this.sku = sku;
+    public Product(String productCode, String name, BigDecimal price, int stockQuantity) {
+        this.productCode = productCode;
         this.name = name;
         this.price = price;
         this.stockQuantity = stockQuantity;
@@ -44,12 +44,12 @@ public class Product {
         return id;
     }
 
-    public String getSku() {
-        return sku;
+    public String getProductCode() {
+        return productCode;
     }
 
-    public void setSku(String sku) {
-        this.sku = sku;
+    public void setProductCode(String productCode) {
+        this.productCode = productCode;
     }
 
     public String getName() {
@@ -82,13 +82,13 @@ public class Product {
 
     public void decreaseStock(int quantity) {
         if (quantity > stockQuantity) {
-            throw new IllegalArgumentException("Stock insuffisant pour " + sku);
+            throw new IllegalArgumentException("Stock insuffisant pour " + productCode);
         }
         this.stockQuantity -= quantity;
     }
 
     @Override
     public String toString() {
-        return sku + " - " + name + " (" + price + " EUR)";
+        return productCode + " - " + name + " (" + price + " EUR)";
     }
 }

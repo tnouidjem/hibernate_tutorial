@@ -26,4 +26,4 @@ C:\Users\drave\Documents\developpement\hibernate_tutorial\src\main\java\com\exam
 C:\Users\drave\Documents\developpement\hibernate_tutorial\src\main\java\com\example\hibernatetutorial\tutorial\usecase\UseCase04aAutoFlushBeforeQuery.java
 C:\Users\drave\Documents\developpement\hibernate_tutorial\src\main\java\com\example\hibernatetutorial\tutorial\usecase\UseCase04bCommitFlushModeBeforeQuery.java
 C:\Users\drave\Documents\developpement\hibernate_tutorial\src\main\java\com\example\hibernatetutorial\tutorial\usecase\UseCase04cPersistenceContextGrowthInLoop.java
-C:\Users\drave\Documents\developpement\hibernate_tutorial\src\main\java\com\example\hibernatetutorial\tutorial\usecase\UseCaseSkus.java
+C:\Users\drave\Documents\developpement\hibernate_tutorial\src\main\java\com\example\hibernatetutorial\tutorial\usecase\UseCaseProductCodes.java
