@@ -48,6 +48,7 @@ public class PurchaseOrder {
         this.customer = customer;
         this.status = status;
         this.createdAt = createdAt;
+        customer.addOrder(this);
     }
 
     public Long getId() {
