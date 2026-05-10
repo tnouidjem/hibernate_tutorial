@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 
+import static com.example.hibernatetutorial.tutorial.usecase.UseCaseProductCodes.HEADSET_INITIAL_PRICE;
 import static com.example.hibernatetutorial.tutorial.usecase.UseCaseProductCodes.HEADSET_PRODUCT_CODE;
 
 @Component
@@ -35,6 +36,7 @@ public class UseCase02aDetachedEntityOutsideServiceTransaction implements Hibern
     @Override
     public void run() {
         console.title("2a. Sans transaction de service: modification d'une entite detachee");
+        diagnostics.resetStatistics();
         diagnostics.print("debut");
 
         // ETAPE 2a.1 - Charger le produit via le repository sans transaction de service englobante.
@@ -54,5 +56,16 @@ public class UseCase02aDetachedEntityOutsideServiceTransaction implements Hibern
         console.value("Prix relu en base", reloaded.getPrice());
         console.value("Prix initial conserve", originalPrice.equals(reloaded.getPrice()));
         diagnostics.print("fin");
+    }
+
+    @Override
+    public void after() {
+        Product headset = productRepository.findByProductCode(HEADSET_PRODUCT_CODE).orElseThrow();
+
+        console.step("Verification apres use case 2a.");
+        console.value("UPDATE Hibernate envoyes", diagnostics.entityUpdateCount());
+        console.check("Aucun UPDATE envoye", diagnostics.entityUpdateCount() == 0);
+        console.value("Prix relu en base", headset.getPrice());
+        console.check("Entite detachee non persistee", HEADSET_INITIAL_PRICE.compareTo(headset.getPrice()) == 0);
     }
 }

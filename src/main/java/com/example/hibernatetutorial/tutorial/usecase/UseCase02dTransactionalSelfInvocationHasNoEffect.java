@@ -10,6 +10,7 @@ import org.springframework.transaction.support.TransactionSynchronizationManager
 
 import java.math.BigDecimal;
 
+import static com.example.hibernatetutorial.tutorial.usecase.UseCaseProductCodes.HEADSET_INITIAL_PRICE;
 import static com.example.hibernatetutorial.tutorial.usecase.UseCaseProductCodes.HEADSET_PRODUCT_CODE;
 
 @Component
@@ -37,6 +38,7 @@ public class UseCase02dTransactionalSelfInvocationHasNoEffect implements Hiberna
     @Override
     public void run() {
         console.title("2c. Self-invocation: appeler une methode @Transactional de la meme classe ne passe pas par le proxy");
+        diagnostics.resetStatistics();
         diagnostics.print("debut");
 
         // ETAPE 2c.1 - Lire le prix initial avant l'appel interne.
@@ -77,5 +79,16 @@ public class UseCase02dTransactionalSelfInvocationHasNoEffect implements Hiberna
         headset.setPrice(newPrice);
         console.value("Prix modifie en memoire dans la methode annotee", headset.getPrice());
         diagnostics.print("fin methode annotee appelee directement");
+    }
+
+    @Override
+    public void after() {
+        Product headset = productRepository.findByProductCode(HEADSET_PRODUCT_CODE).orElseThrow();
+
+        console.step("Verification apres use case 2c.");
+        console.value("UPDATE Hibernate envoyes", diagnostics.entityUpdateCount());
+        console.check("Aucun UPDATE envoye par self-invocation", diagnostics.entityUpdateCount() == 0);
+        console.value("Prix relu en base", headset.getPrice());
+        console.check("@Transactional ignore sans effet durable", HEADSET_INITIAL_PRICE.compareTo(headset.getPrice()) == 0);
     }
 }

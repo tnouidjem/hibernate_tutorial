@@ -46,6 +46,7 @@ public class UseCase04cPersistenceContextGrowthInLoop implements HibernateUseCas
     @Transactional
     public void run() {
         console.title("4c. Persistence Context: modifier un graphe en boucle peut saturer le contexte");
+        diagnostics.resetStatistics();
         diagnostics.print("debut");
 
         // ETAPE 4c.1 - Garder cette demonstration sans effet durable en base.
@@ -141,6 +142,31 @@ public class UseCase04cPersistenceContextGrowthInLoop implements HibernateUseCas
         console.step("Dans la premiere boucle, le contexte grossit jusqu'a contenir tout le graphe visite.");
         console.step("Dans la seconde boucle, flush()+clear() toutes les 30 entites modifiees limite le nombre d'entites managees.");
         console.step("La transaction est rollback-only pour supprimer les donnees de demonstration au retour de la methode.");
+    }
+
+    @Override
+    public void after() {
+        Long demoCustomerCount = entityManager
+                .createQuery("""
+                        select count(c)
+                        from Customer c
+                        where c.email = :email
+                        """, Long.class)
+                .setParameter("email", "demo.persistence-context@example.com")
+                .getSingleResult();
+        Long demoProductCount = entityManager
+                .createQuery("""
+                        select count(p)
+                        from Product p
+                        where p.productCode like 'CODE-BULK-%'
+                        """, Long.class)
+                .getSingleResult();
+
+        console.step("Verification apres transaction 4c.");
+        console.value("UPDATE Hibernate envoyes", diagnostics.entityUpdateCount());
+        console.check("Des UPDATE ont ete envoyes pendant les flush", diagnostics.entityUpdateCount() > 0);
+        console.check("Client de demo rollback", demoCustomerCount == 0);
+        console.check("Produits bulk rollback", demoProductCount == 0);
     }
 
     private Long createDemoGraph() {

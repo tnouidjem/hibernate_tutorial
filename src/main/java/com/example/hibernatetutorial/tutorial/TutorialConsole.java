@@ -19,4 +19,8 @@ public class TutorialConsole {
     public void value(String label, Object value) {
         System.out.printf("   %-48s : %s%n", label, value);
     }
+
+    public void check(String label, boolean success) {
+        value(label, success ? "OK" : "KO");
+    }
 }

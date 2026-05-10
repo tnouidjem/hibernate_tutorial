@@ -11,6 +11,7 @@ import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import java.math.BigDecimal;
 import java.util.List;
 
+import static com.example.hibernatetutorial.tutorial.usecase.UseCaseProductCodes.LAPTOP_INITIAL_PRICE;
 import static com.example.hibernatetutorial.tutorial.usecase.UseCaseProductCodes.LAPTOP_PRODUCT_CODE;
 
 @Component
@@ -39,6 +40,7 @@ public class UseCase04aAutoFlushBeforeQuery implements HibernateUseCase {
     @Transactional
     public void run() {
         console.title("4a. Flush AUTO: une requete JPQL peut declencher un UPDATE avant son SELECT");
+        diagnostics.resetStatistics();
         diagnostics.print("debut");
 
         // ETAPE 4a.1 - Marquer la transaction en rollback-only pour ne pas garder le prix fictif.
@@ -57,5 +59,16 @@ public class UseCase04aAutoFlushBeforeQuery implements HibernateUseCase {
         console.step("Regardez les logs SQL: l'UPDATE du laptop apparait avant le SELECT des produits chers.");
         console.value("Laptop present dans le resultat", expensiveProducts.stream().anyMatch(p -> LAPTOP_PRODUCT_CODE.equals(p.getProductCode())));
         console.step("La transaction est marquee rollback-only pour garder les donnees initiales apres la demo.");
+    }
+
+    @Override
+    public void after() {
+        Product laptop = productRepository.findByProductCode(LAPTOP_PRODUCT_CODE).orElseThrow();
+
+        console.step("Verification apres transaction 4a.");
+        console.value("UPDATE Hibernate envoyes", diagnostics.entityUpdateCount());
+        console.check("Un UPDATE a ete envoye par flush AUTO", diagnostics.entityUpdateCount() == 1);
+        console.value("Prix relu en base", laptop.getPrice());
+        console.check("Rollback final applique", LAPTOP_INITIAL_PRICE.compareTo(laptop.getPrice()) == 0);
     }
 }

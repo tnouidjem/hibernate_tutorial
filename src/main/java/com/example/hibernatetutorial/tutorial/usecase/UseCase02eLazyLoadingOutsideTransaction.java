@@ -32,6 +32,7 @@ public class UseCase02eLazyLoadingOutsideTransaction implements HibernateUseCase
     @Override
     public void run() {
         console.title("2d. Transaction et LAZY loading: acces hors transaction");
+        diagnostics.resetStatistics();
         diagnostics.print("debut");
 
         // ETAPE 2d.1 - Charger une commande sans transaction de service ouverte autour du use case.
@@ -47,5 +48,13 @@ public class UseCase02eLazyLoadingOutsideTransaction implements HibernateUseCase
             console.value("Message Hibernate", ex.getMessage());
         }
         diagnostics.print("fin");
+    }
+
+    @Override
+    public void after() {
+        console.step("Verification apres use case 2d.");
+        console.value("UPDATE Hibernate envoyes", diagnostics.entityUpdateCount());
+        console.check("Aucun UPDATE envoye par un test de LAZY loading", diagnostics.entityUpdateCount() == 0);
+        console.check("La base reste lisible apres l'exception attendue", purchaseOrderRepository.findFirstByOrderByIdAsc().isPresent());
     }
 }

@@ -41,6 +41,7 @@ public class UseCase03DtoProjectionInReadOnlyTransaction implements HibernateUse
     @Transactional(readOnly = true)
     public void run() {
         console.title("3. Projection DTO dans une transaction read-only");
+        diagnostics.resetStatistics();
         diagnostics.print("debut");
 
         // ETAPE 3.1 - Recuperer la session Hibernate pour afficher la configuration de lecture.
@@ -54,5 +55,15 @@ public class UseCase03DtoProjectionInReadOnlyTransaction implements HibernateUse
 
         // ETAPE 3.3 - Afficher les resultats agreges retournes par la projection.
         sales.forEach(dto -> console.value(dto.productCode(), dto.quantitySold() + " ventes, CA " + dto.revenue() + " EUR"));
+    }
+
+    @Override
+    public void after() {
+        List<ProductSalesDto> sales = productRepository.findSalesSummary();
+
+        console.step("Verification apres transaction 3.");
+        console.value("UPDATE Hibernate envoyes", diagnostics.entityUpdateCount());
+        console.check("Aucun UPDATE envoye par une projection DTO", diagnostics.entityUpdateCount() == 0);
+        console.check("Projection encore disponible apres transaction", !sales.isEmpty());
     }
 }

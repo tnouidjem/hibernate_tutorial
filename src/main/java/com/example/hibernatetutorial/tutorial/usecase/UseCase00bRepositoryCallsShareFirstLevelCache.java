@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import static com.example.hibernatetutorial.tutorial.usecase.UseCaseProductCodes.LAPTOP_PRODUCT_CODE;
+import static com.example.hibernatetutorial.tutorial.usecase.UseCaseProductCodes.LAPTOP_NAME_AFTER_REPOSITORY_CACHE_DEMO;
 
 @Component
 public class UseCase00bRepositoryCallsShareFirstLevelCache implements HibernateUseCase {
@@ -36,6 +37,7 @@ public class UseCase00bRepositoryCallsShareFirstLevelCache implements HibernateU
     @Transactional
     public void run() {
         console.title("0b. Repository findByProductCode: deux SELECT, mais une seule instance Java");
+        diagnostics.resetStatistics();
         diagnostics.print("debut");
 
         // ETAPE 0b.1 - Executer un premier appel Spring Data JPA par critere.
@@ -58,5 +60,16 @@ public class UseCase00bRepositoryCallsShareFirstLevelCache implements HibernateU
         console.step("A ce stade, aucun save(...) n'est necessaire pour que les deux references voient la meme valeur.");
         console.step("La transaction va commit: regardez les logs SQL, Hibernate fera un UPDATE a la fin de la methode.");
         diagnostics.print("fin avant commit");
+    }
+
+    @Override
+    public void after() {
+        Product laptop = productRepository.findByProductCode(LAPTOP_PRODUCT_CODE).orElseThrow();
+
+        console.step("Verification apres transaction 0b.");
+        console.value("UPDATE Hibernate envoyes", diagnostics.entityUpdateCount());
+        console.check("Un UPDATE a ete envoye", diagnostics.entityUpdateCount() == 1);
+        console.value("Nom relu en base", laptop.getName());
+        console.check("Transaction validee", LAPTOP_NAME_AFTER_REPOSITORY_CACHE_DEMO.equals(laptop.getName()));
     }
 }

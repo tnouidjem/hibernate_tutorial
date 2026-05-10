@@ -16,6 +16,9 @@ public class HibernateAdvancedUseCases {
     private static final String PHONE_PRODUCT_CODE = "CODE-PHONE-PLUS";
     private static final String HEADSET_PRODUCT_CODE = "CODE-HEADSET-BT";
     private static final String MOUSE_PRODUCT_CODE = "CODE-MOUSE-WIRELESS";
+    private static final BigDecimal PHONE_INITIAL_PRICE = new BigDecimal("899.00");
+    private static final BigDecimal HEADSET_INITIAL_PRICE = new BigDecimal("149.90");
+    private static final BigDecimal MOUSE_INITIAL_PRICE = new BigDecimal("49.90");
 
     private final EntityManager entityManager;
     private final PlatformTransactionManager transactionManager;
@@ -41,6 +44,7 @@ public class HibernateAdvancedUseCases {
      */
     public void demonstrateIsolationLevels() {
         console.title("5. Isolation: READ_COMMITTED vs REPEATABLE_READ avec deux transactions");
+        diagnostics.resetStatistics();
         diagnostics.print("debut");
 
         compareIsolationLevel(
@@ -54,6 +58,14 @@ public class HibernateAdvancedUseCases {
                 new BigDecimal("69.90")
         );
         diagnostics.print("fin");
+    }
+
+    public void afterDemonstrateIsolationLevels() {
+        BigDecimal mousePrice = readPriceInNewTransaction(MOUSE_PRODUCT_CODE);
+
+        console.step("Verification apres use case 5.");
+        console.value("Prix souris relu en base", mousePrice);
+        console.check("Prix souris restaure apres les tests d'isolation", MOUSE_INITIAL_PRICE.compareTo(mousePrice) == 0);
     }
 
     /**
@@ -99,6 +111,7 @@ public class HibernateAdvancedUseCases {
      */
     public void demonstrateFirstLevelCacheCanHideIsolationEffects() {
         console.title("6. Isolation et cache de premier niveau: une entite managee peut masquer un commit externe");
+        diagnostics.resetStatistics();
         diagnostics.print("debut");
 
         BigDecimal originalPrice = readPriceInNewTransaction(PHONE_PRODUCT_CODE);
@@ -146,6 +159,14 @@ public class HibernateAdvancedUseCases {
         diagnostics.print("fin");
     }
 
+    public void afterDemonstrateFirstLevelCacheCanHideIsolationEffects() {
+        BigDecimal phonePrice = readPriceInNewTransaction(PHONE_PRODUCT_CODE);
+
+        console.step("Verification apres use case 6.");
+        console.value("Prix smartphone relu en base", phonePrice);
+        console.check("Prix smartphone restaure apres commit externe", PHONE_INITIAL_PRICE.compareTo(phonePrice) == 0);
+    }
+
     /**
      * But de la demonstration: montrer l'effet de PROPAGATION_REQUIRED sur un rollback interne.
      * Explication technique: REQUIRED rejoint la transaction existante. Quand le bloc interne marque rollback-only,
@@ -153,6 +174,7 @@ public class HibernateAdvancedUseCases {
      */
     public void demonstrateRequiredPropagationRollback() {
         console.title("7. Propagation REQUIRED: l'appel interne participe a la transaction externe");
+        diagnostics.resetStatistics();
         diagnostics.print("debut");
 
         BigDecimal originalPrice = readPriceInNewTransaction(PHONE_PRODUCT_CODE);
@@ -196,6 +218,14 @@ public class HibernateAdvancedUseCases {
         diagnostics.print("fin");
     }
 
+    public void afterDemonstrateRequiredPropagationRollback() {
+        BigDecimal phonePrice = readPriceInNewTransaction(PHONE_PRODUCT_CODE);
+
+        console.step("Verification apres use case 7.");
+        console.value("Prix smartphone relu en base", phonePrice);
+        console.check("Rollback REQUIRED confirme en base", PHONE_INITIAL_PRICE.compareTo(phonePrice) == 0);
+    }
+
     /**
      * But de la demonstration: montrer qu'une transaction REQUIRES_NEW est independante de la transaction appelante.
      * Explication technique: Spring suspend la transaction externe, ouvre une nouvelle transaction pour le bloc
@@ -203,6 +233,7 @@ public class HibernateAdvancedUseCases {
      */
     public void demonstrateRequiresNewPropagation() {
         console.title("8. Propagation REQUIRES_NEW: l'appel interne commit meme si l'externe rollback");
+        diagnostics.resetStatistics();
         diagnostics.print("debut");
 
         BigDecimal phoneOriginalPrice = readPriceInNewTransaction(PHONE_PRODUCT_CODE);
@@ -244,6 +275,17 @@ public class HibernateAdvancedUseCases {
         updatePriceInNewCommittedTransaction(HEADSET_PRODUCT_CODE, headsetOriginalPrice);
         updatePriceInNewCommittedTransaction(PHONE_PRODUCT_CODE, phoneOriginalPrice);
         diagnostics.print("fin");
+    }
+
+    public void afterDemonstrateRequiresNewPropagation() {
+        BigDecimal phonePrice = readPriceInNewTransaction(PHONE_PRODUCT_CODE);
+        BigDecimal headsetPrice = readPriceInNewTransaction(HEADSET_PRODUCT_CODE);
+
+        console.step("Verification apres use case 8.");
+        console.value("Prix smartphone relu en base", phonePrice);
+        console.value("Prix casque relu en base", headsetPrice);
+        console.check("Rollback externe confirme", PHONE_INITIAL_PRICE.compareTo(phonePrice) == 0);
+        console.check("REQUIRES_NEW restaure apres demonstration", HEADSET_INITIAL_PRICE.compareTo(headsetPrice) == 0);
     }
 
     private BigDecimal readPriceInNewTransaction(String productCode) {

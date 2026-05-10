@@ -12,6 +12,7 @@ import org.springframework.transaction.support.TransactionSynchronizationManager
 
 import java.math.BigDecimal;
 
+import static com.example.hibernatetutorial.tutorial.usecase.UseCaseProductCodes.KEYBOARD_INITIAL_PRICE;
 import static com.example.hibernatetutorial.tutorial.usecase.UseCaseProductCodes.KEYBOARD_PRODUCT_CODE;
 
 @Component
@@ -44,6 +45,7 @@ public class UseCase02bReadOnlyTransactionDirtyChecking implements HibernateUseC
     @Transactional(readOnly = true)
     public void run() {
         console.title("2b. Transaction read-only: setter + save explicite ne modifient pas la base");
+        diagnostics.resetStatistics();
         diagnostics.print("debut");
 
         // ETAPE 2b.1 - Recuperer la session Hibernate pour exposer l'etat read-only.
@@ -71,5 +73,16 @@ public class UseCase02bReadOnlyTransactionDirtyChecking implements HibernateUseC
         console.value("Prix modifie en memoire", savedKeyboard.getPrice());
         console.step("Regardez les logs SQL: aucun UPDATE du clavier n'est attendu au commit de cette transaction read-only.");
         diagnostics.print("fin avant commit read-only");
+    }
+
+    @Override
+    public void after() {
+        Product keyboard = productRepository.findByProductCode(KEYBOARD_PRODUCT_CODE).orElseThrow();
+
+        console.step("Verification apres transaction 2b.");
+        console.value("UPDATE Hibernate envoyes", diagnostics.entityUpdateCount());
+        console.check("Aucun UPDATE envoye en read-only", diagnostics.entityUpdateCount() == 0);
+        console.value("Prix relu en base", keyboard.getPrice());
+        console.check("Transaction read-only sans effet durable", KEYBOARD_INITIAL_PRICE.compareTo(keyboard.getPrice()) == 0);
     }
 }

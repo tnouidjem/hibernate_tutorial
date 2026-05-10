@@ -11,6 +11,7 @@ import org.springframework.transaction.interceptor.TransactionAspectSupport;
 
 import java.math.BigDecimal;
 
+import static com.example.hibernatetutorial.tutorial.usecase.UseCaseProductCodes.LAPTOP_INITIAL_PRICE;
 import static com.example.hibernatetutorial.tutorial.usecase.UseCaseProductCodes.LAPTOP_PRODUCT_CODE;
 
 @Component
@@ -43,6 +44,7 @@ public class UseCase01FirstLevelCache implements HibernateUseCase {
     @Transactional
     public void run() {
         console.title("1. Cache de premier niveau: une identite Java par entite dans une transaction");
+        diagnostics.resetStatistics();
         diagnostics.print("debut");
 
         // ETAPE 1.1 - Marquer la transaction en rollback-only pour isoler la demonstration.
@@ -78,5 +80,16 @@ public class UseCase01FirstLevelCache implements HibernateUseCase {
         console.value("Meme instance Java apres clear()", firstLoad == afterClear);
         console.value("Produit recharge", afterClear);
         console.step("La transaction est rollback-only pour que ce setter reste une demonstration sans effet durable.");
+    }
+
+    @Override
+    public void after() {
+        Product laptop = productRepository.findByProductCode(LAPTOP_PRODUCT_CODE).orElseThrow();
+
+        console.step("Verification apres transaction 1.");
+        console.value("UPDATE Hibernate envoyes", diagnostics.entityUpdateCount());
+        console.check("Aucun UPDATE envoye apres clear()", diagnostics.entityUpdateCount() == 0);
+        console.value("Prix relu en base", laptop.getPrice());
+        console.check("Rollback/clear sans effet durable", LAPTOP_INITIAL_PRICE.compareTo(laptop.getPrice()) == 0);
     }
 }

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import static com.example.hibernatetutorial.tutorial.usecase.UseCaseProductCodes.LAPTOP_PRODUCT_CODE;
+import static com.example.hibernatetutorial.tutorial.usecase.UseCaseProductCodes.LAPTOP_NAME_AFTER_FIND_BY_ID_DEMO;
 
 @Component
 public class UseCase00aRepositoryFindByIdUsesFirstLevelCache implements HibernateUseCase {
@@ -36,6 +37,7 @@ public class UseCase00aRepositoryFindByIdUsesFirstLevelCache implements Hibernat
     @Transactional
     public void run() {
         console.title("0a. Repository findById: le deuxieme acces par id ne refait pas de SELECT");
+        diagnostics.resetStatistics();
         diagnostics.print("debut");
 
         // ETAPE 0a.1 - Recuperer l'identifiant qui servira aux deux lectures par cle primaire.
@@ -61,5 +63,16 @@ public class UseCase00aRepositoryFindByIdUsesFirstLevelCache implements Hibernat
         console.step("Regardez les logs SQL: apres le SELECT par id initial, le deuxieme findById ne relit pas la ligne.");
         console.step("La transaction commit ensuite: le setter declenche un UPDATE par dirty checking.");
         diagnostics.print("fin avant commit");
+    }
+
+    @Override
+    public void after() {
+        Product laptop = productRepository.findByProductCode(LAPTOP_PRODUCT_CODE).orElseThrow();
+
+        console.step("Verification apres transaction 0a.");
+        console.value("UPDATE Hibernate envoyes", diagnostics.entityUpdateCount());
+        console.check("Un UPDATE a ete envoye", diagnostics.entityUpdateCount() == 1);
+        console.value("Nom relu en base", laptop.getName());
+        console.check("Transaction validee", LAPTOP_NAME_AFTER_FIND_BY_ID_DEMO.equals(laptop.getName()));
     }
 }

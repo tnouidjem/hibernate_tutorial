@@ -6,6 +6,7 @@ import com.example.hibernatetutorial.tutorial.HibernateDiagnostics;
 import com.example.hibernatetutorial.tutorial.TutorialConsole;
 import org.springframework.stereotype.Component;
 
+import static com.example.hibernatetutorial.tutorial.usecase.UseCaseProductCodes.KEYBOARD_INITIAL_PRICE;
 import static com.example.hibernatetutorial.tutorial.usecase.UseCaseProductCodes.KEYBOARD_PRODUCT_CODE;
 
 @Component
@@ -33,6 +34,7 @@ public class UseCase02cReadOnlySaveWasNotCommittedVerification implements Hibern
     @Override
     public void run() {
         console.title("2b-verification. Verification apres transaction read-only");
+        diagnostics.resetStatistics();
         diagnostics.print("debut");
 
         // ETAPE 2b-verification.1 - Relire le clavier apres la transaction read-only precedente.
@@ -41,5 +43,15 @@ public class UseCase02cReadOnlySaveWasNotCommittedVerification implements Hibern
         // ETAPE 2b-verification.2 - Afficher le prix effectivement conserve en base.
         console.value("Prix relu apres transaction read-only", keyboard.getPrice());
         diagnostics.print("fin");
+    }
+
+    @Override
+    public void after() {
+        Product keyboard = productRepository.findByProductCode(KEYBOARD_PRODUCT_CODE).orElseThrow();
+
+        console.step("Verification apres use case 2b-verification.");
+        console.value("UPDATE Hibernate envoyes", diagnostics.entityUpdateCount());
+        console.check("Aucun UPDATE envoye pendant la verification", diagnostics.entityUpdateCount() == 0);
+        console.check("Prix initial toujours conserve", KEYBOARD_INITIAL_PRICE.compareTo(keyboard.getPrice()) == 0);
     }
 }

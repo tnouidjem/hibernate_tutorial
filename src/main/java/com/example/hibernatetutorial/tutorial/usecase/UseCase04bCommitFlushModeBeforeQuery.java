@@ -13,6 +13,7 @@ import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import java.math.BigDecimal;
 import java.util.List;
 
+import static com.example.hibernatetutorial.tutorial.usecase.UseCaseProductCodes.PHONE_INITIAL_PRICE;
 import static com.example.hibernatetutorial.tutorial.usecase.UseCaseProductCodes.PHONE_PRODUCT_CODE;
 
 @Component
@@ -44,6 +45,7 @@ public class UseCase04bCommitFlushModeBeforeQuery implements HibernateUseCase {
     @Transactional
     public void run() {
         console.title("4b. Flush COMMIT: une requete peut ne pas voir une modification en attente");
+        diagnostics.resetStatistics();
         diagnostics.print("debut");
 
         // ETAPE 4b.1 - Marquer la transaction en rollback-only pour isoler la demonstration.
@@ -70,5 +72,16 @@ public class UseCase04bCommitFlushModeBeforeQuery implements HibernateUseCase {
             // ETAPE 4b.6 - Restaurer le flush mode precedent pour ne pas affecter les autres demonstrations.
             entityManager.setFlushMode(previousFlushMode);
         }
+    }
+
+    @Override
+    public void after() {
+        Product phone = productRepository.findByProductCode(PHONE_PRODUCT_CODE).orElseThrow();
+
+        console.step("Verification apres transaction 4b.");
+        console.value("UPDATE Hibernate envoyes", diagnostics.entityUpdateCount());
+        console.check("Aucun UPDATE envoye avant le rollback", diagnostics.entityUpdateCount() == 0);
+        console.value("Prix relu en base", phone.getPrice());
+        console.check("Rollback final applique", PHONE_INITIAL_PRICE.compareTo(phone.getPrice()) == 0);
     }
 }
